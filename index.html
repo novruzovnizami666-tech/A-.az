@@ -1,114 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<title>Ai.az – Computers, keyboards, mice and accessories, compared</title>
-<meta name="description" content="Compare computers, keyboards, mice, headphones, monitors and hubs on Ai.az.">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#07070A">
-<meta name="application-name" content="Ai.az">
-<meta name="apple-mobile-web-app-title" content="Ai.az">
-<link rel="canonical" href="https://ai-az.site/">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307070A'/%3E%3Ctext x='29' y='43' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='30' fill='%23fff'%3EAi%3C/text%3E%3Ccircle cx='51' cy='44' r='4.5' fill='%23E2BE80'/%3E%3C/svg%3E">
-<meta property="og:site_name" content="Ai.az">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ai-az.site/">
-<meta property="og:title" content="Ai.az – Computers, keyboards, mice and accessories, compared">
-<meta property="og:description" content="Compare computers, keyboards, mice, headphones, monitors and hubs on Ai.az.">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ai.az – Computers, keyboards, mice and accessories, compared">
-<meta name="twitter:description" content="Compare computers, keyboards, mice, headphones, monitors and hubs on Ai.az.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Ai.az","alternateName":"ai-az.site","url":"https://ai-az.site/","inLanguage":["az","tr","en"],"description":"Compare computers, keyboards, mice, headphones, monitors and hubs on Ai.az."}</script>
+<title>Ai.az – Kompüter, Klaviatura və Aksesuarların Müqayisəsi</title>
+<meta name="description" content="Ai.az platformasında kompüterlər, klaviaturalar, qulaqlıqlar və monitorları müqayisə edin.">
 <style>
-@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
 :root{
-  --photo:url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1920&q=80");
   --bg:#07070A;--tx:#F5F5F7;--mut:#9A9AA3;--line:rgba(255,255,255,.1);
-  --gold:#E2BE80;--gold2:#B98A4A;--f:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+  --gold:#E2BE80;--gold2:#B98A4A;--f:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.55 var(--f);padding-top:env(safe-area-inset-top,0px);overflow-x:hidden;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.55 var(--f);padding:0}
 .wrap{max-width:1200px;margin:0 auto;padding:0 22px}
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(7,7,10,.66);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);border-bottom:1px solid var(--line)}
-.nb{display:flex;align-items:center;justify-content:space-between;height:54px}
-.logo{font-size:22px;font-weight:700;letter-spacing:-.05em;text-decoration:none;text-shadow:0 0 22px rgba(255,255,255,.45)}
-.logo i{font-style:normal;color:var(--gold);font-weight:500}
-.nr{display:flex;align-items:center}
-.nl a{margin-left:24px;font-size:13.5px;color:#D2D2D7;text-decoration:none;transition:color .2s}
-.nl a:hover{color:#fff}
-.lang{position:relative;margin-left:22px}
-.lb{display:flex;align-items:center;gap:7px;font:600 13px var(--f);color:#E5E5EA;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:980px;padding:7px 12px;cursor:pointer;transition:all .2s}
-.lb:hover,.lb[aria-expanded=true]{border-color:var(--gold);color:#fff;box-shadow:0 0 20px rgba(226,190,128,.22)}
-.lb svg{display:block}
-.lm{position:absolute;right:0;top:calc(100% + 10px);min-width:176px;background:rgba(18,18,22,.94);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border:1px solid var(--line);border-radius:16px;padding:6px;box-shadow:0 24px 60px rgba(0,0,0,.6);z-index:60}
-.lm[hidden]{display:none}
-.lm button{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:500 14.5px var(--f);color:#E5E5EA;background:none;border:0;border-radius:10px;padding:10px 12px;cursor:pointer}
-.lm button:hover{background:rgba(255,255,255,.08)}
-.lm .cd{font-weight:700;color:var(--gold);width:24px}
-.lm button[aria-checked=true]{color:#fff}
-.lm button[aria-checked=true]:after{content:"✓";margin-left:auto;color:var(--gold)}
-.hero{position:relative;text-align:center;padding:76px 0 40px;overflow:hidden;isolation:isolate}
-.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:var(--photo) center/cover no-repeat;opacity:.16;filter:grayscale(1) contrast(1.15)}
-.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 45% at 50% 52%,rgba(226,190,128,.16),transparent 70%),linear-gradient(#07070A 0,rgba(7,7,10,.35) 35%,rgba(7,7,10,.5) 70%,#07070A 100%)}
-.kick{color:var(--gold);font-weight:600;font-size:15px;letter-spacing:.02em;margin:0 0 14px}
-h1{font-size:clamp(44px,9vw,104px);line-height:1;letter-spacing:-.05em;font-weight:700;margin:0 auto 18px;text-shadow:0 0 60px rgba(255,255,255,.32)}
-h1 .g{background:linear-gradient(180deg,#fff 25%,var(--gold) 120%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
-.sub{font-size:clamp(18px,2.4vw,24px);color:var(--mut);max-width:30em;margin:0 auto;line-height:1.4}
-
-/* Slider Section */
-.hero-slider-wrap{margin-top:40px;position:relative;width:100%;overflow:hidden;padding:20px 0}
-.hero-slider{display:flex;gap:20px;animation:scrollSlider 25s linear infinite;width:max-content}
-.hero-slider:hover{animation-play-state:paused}
-@keyframes scrollSlider{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.cmp-card{background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:20px;padding:20px 24px;width:320px;backdrop-filter:blur(15px);text-align:left;cursor:pointer;transition:all .3s ease;flex-shrink:0}
-.cmp-card:hover{border-color:var(--gold);transform:translateY(-5px);box-shadow:0 10px 30px rgba(226,190,128,.2)}
-.cmp-card .badge{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;display:inline-block}
-.cmp-card .vs-title{display:flex;align-items:center;justify-content:space-between;font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
-.cmp-card .vs-title span{color:var(--gold);font-style:italic;font-size:13px;padding:0 6px}
-.cmp-card .desc{font-size:13px;color:var(--mut);line-height:1.4}
-
-.cue{margin-top:26px;color:var(--mut);font-size:13.5px}
-section{padding:96px 0 10px}
-h2{font-size:clamp(34px,6vw,68px);line-height:1.03;letter-spacing:-.04em;font-weight:700;margin:0 0 14px;text-shadow:0 0 40px rgba(255,255,255,.16)}
-.lead{color:var(--mut);font-size:20px;max-width:32em;margin:0 0 34px}
-.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.glass{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:28px}
-.glass:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:conic-gradient(from var(--a),rgba(255,255,255,.08) 0 62%,rgba(226,190,128,.95) 82%,rgba(255,255,255,.08));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 7s linear infinite;pointer-events:none}
-@keyframes spin{to{--a:360deg}}
-.feat .glass{padding:30px}
-.feat h3{font-size:26px;line-height:1.12;letter-spacing:-.03em;margin:0 0 10px}
-.feat p{color:var(--mut);margin:0;font-size:16px}
-.sf{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 26px}
-.sf button{font:500 14px var(--f);color:#E5E5EA;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:980px;padding:8px 16px;cursor:pointer;transition:all .2s}
-.sf button:hover{border-color:rgba(255,255,255,.35)}
-.sf button[aria-pressed=true]{background:#F5F5F7;color:#111;border-color:#F5F5F7}
-.tabs{max-width:100%;overflow-x:auto;display:inline-flex;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:980px;padding:4px;margin-bottom:28px}
-.tabs button{white-space:nowrap;font:600 15px var(--f);color:#C9C9CF;background:none;border:0;border-radius:980px;padding:10px 26px;cursor:pointer;transition:all .25s}
+nav{position:sticky;top:0;z-index:50;background:rgba(7,7,10,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.nb{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-size:24px;font-weight:700;text-decoration:none;color:#fff}
+.logo i{font-style:normal;color:var(--gold)}
+.hero{text-align:center;padding:80px 0 40px}
+.kick{color:var(--gold);font-weight:600;font-size:15px;margin-bottom:14px}
+h1{font-size:clamp(38px,7vw,72px);font-weight:700;margin:0 0 18px;letter-spacing:-.03em}
+h1 span{color:var(--gold)}
+.sub{font-size:18px;color:var(--mut);max-width:32em;margin:0 auto 40px;line-height:1.5}
+.hero-slider-wrap{margin:30px 0;overflow:hidden;padding:10px 0}
+.hero-slider{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.cmp-card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px;padding:20px 24px;width:280px;text-align:left;cursor:pointer;transition:.2s}
+.cmp-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.cmp-card .badge{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;margin-bottom:6px;display:block}
+.cmp-card .vs-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
+.cmp-card .vs-title span{color:var(--gold);font-size:13px}
+.cmp-card .desc{font-size:13px;color:var(--mut)}
+section{padding:60px 0}
+h2{font-size:36px;font-weight:700;margin-bottom:10px}
+.lead{color:var(--mut);font-size:18px;margin-bottom:30px}
+.tabs{display:inline-flex;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:980px;padding:4px;margin-bottom:30px}
+.tabs button{font:600 14px var(--f);color:#C9C9CF;background:none;border:0;border-radius:980px;padding:10px 24px;cursor:pointer;transition:.2s}
 .tabs button[aria-pressed=true]{background:#F5F5F7;color:#111}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
-.card{padding:26px;display:flex;flex-direction:column;transition:transform .3s}
-.card:hover{transform:translateY(-4px)}
-.card.sel{box-shadow:0 0 0 1px var(--gold),0 24px 60px rgba(226,190,128,.18)}
-.ty{font-size:12.5px;font-weight:600;color:var(--gold);margin-bottom:6px}
-.card h3{font-size:25px;line-height:1.1;letter-spacing:-.03em;margin:0 0 8px}
-.card .t{color:var(--mut);font-size:15px;margin:0 0 14px;min-height:3em}
-.sp{padding:10px 0;border-top:1px solid var(--line);font-size:14px;display:flex;justify-content:space-between;gap:12px}
-.sp span{color:var(--mut);flex:none}.sp b{font-weight:500;text-align:right}
-.rt{margin:14px 0 20px;display:grid;gap:9px}
-.rr{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center;font-size:12.5px;color:var(--mut)}
-.bar{height:5px;border-radius:5px;background:rgba(255,255,255,.1);overflow:hidden}
-.bar b{display:block;height:100%;background:linear-gradient(90deg,var(--gold2),var(--gold),#fff);border-radius:5px;box-shadow:0 0 10px rgba(226,190,128,.7)}
-.acts{margin-top:auto;display:grid;gap:10px}
-.btn{display:block;text-align:center;font:600 16px var(--f);padding:13px 18px;border-radius:980px;text-decoration:none;border:0;cursor:pointer;transition:all .25s}
-.btn.buy{background:linear-gradient(135deg,#F3D9A6,var(--gold) 45%,var(--gold2));color:#1a1206;box-shadow:0 10px 30px rgba(226,190,128,.28)}
-.btn.buy:hover{box-shadow:0 14px 42px rgba(226,190,128,.5);transform:translateY(-1px)}
-.btn.ghost{background:rgba(255,255,255,.09);color:#fff}.btn.ghost:hover{background:rgba(255,255,255,.16)}
-.cmp{margin-top:34px}
-.hint{border:1px dashed rgba(255,255,255,.2);border-radius:24px;padding:34px 20px;text-align:center;color:var(--mut)}
-.tw{overflow-x:auto;border-radius:28px;-webkit-overflow-scrolling:touch}
-table{width:
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column}
+.card.sel{border-color:var(--gold);box-shadow:0 0 20px rgba(226,190,128,.15)}
+.ty{font-size:12px;font-weight:600;color:var(--gold);margin-bottom:6px}
+.card h3{font-size:22px;margin:0 0 8px}
+.card .t{color:var(--mut);font-size:14px;margin-bottom:20px;flex:1}
+.btn{display:block;text-align:center;font:600 15px var(--f);padding:12px;border-radius:980px;border:0;cursor:pointer;transition:.2s}
+.btn.buy{background:var(--gold);color:#1a1206}
+.btn.ghost{background:rgba(255,255,255,.08);color:#fff}
+.cmp{margin-top:40px}
+.hint{border:1px dashed var(--line);border-radius:20px;padding:30px;text-align:center;color:var(--mut)}
+.tw{overflow-x:auto;border-radius:20px}
+table{width:100%;border-collapse:collapse;min-width:500px}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}
+th{font-size:16px}
+th:first-child,td:first-child{color:var(--mut);width:130px}
+footer{margin-top:80px;border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nb">
+  <a class="logo" href="#">Ai<i>.az</i></a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <p class="kick">Dəqiqlik, qat-qat</p>
+  <h1>Maşının <span>içində.</span></h1>
+  <p class="sub">Hər qat dəqiqliklə hazırlanıb. Sonra müqayisə edirik ki, doğrusunu alasan.</p>
+  
+  <div class="hero-slider-wrap">
+    <div class="hero-slider">
+      <div class="cmp-card" onclick="scrollToCompare('comp', ['mbp', 'xps'])">
+        <span class="badge">Top Noutbuk</span>
+        <div class="vs-title">MacBook Pro <span>VS</span> Dell XPS</div>
+        <div class="desc">macOS dözümlülüyü yoxsa Windows zərifliyi?</div>
+      </div>
+      <div class="cmp-card" onclick="scrollToCompare('ms', ['mxm', 'mm'])">
+        <span class="badge">Siçan Müqayisəsi</span>
+        <div class="vs-title">MX Master <span>VS</span> Magic Mouse</div>
+        <div class="desc">Erqonomik məhsuldarlıq yoxsa minimal dizayn?</div>
+      </div>
+      <div class="cmp-card" onclick="scrollToCompare('kb', ['wtg', 'gpx'])">
+        <span class="badge">Oyun Klaviaturası</span>
+        <div class="vs-title">Wooting 60HE <span>VS</span> Logitech G PRO</div>
+        <div class="desc">Maqnit açarlar yoxsa klassik e-idman?</div>
+      </div>
+    </div>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <section id="compare">
+    <h2>Müqayisə et.</h2>
+    <p class="lead">Kateqoriya seç, məhsulları işarələ və yan-yana gör.</p>
+    
+    <div class="tabs" id="tb">
+      <button type="button" aria-pressed="true" data-k="comp">Kompüterlər</button>
+      <button type="button" aria-pressed="false" data-k="kb">Klaviaturam</button>
+      <button type="button" aria-pressed="false" data-k="ms">Siçanlar</button>
+      <button type="button" aria-pressed="false" data-k="acc">Aksesuarlar</button>
+    </div>
+
+    <div class="grid" id="gr"></div>
+    <div class="cmp" id="cm"></div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <p>© 2026 Ai.az · Bütün hüquqlar qorunur.</p>
+</div></footer>
+
+<script>
+(function(){
+'use strict';
+var P={
+comp:[
+{id:'mbp',n:'MacBook Pro 14"',ty:'Noutbuk',t:'Yaradıcılar və proqramçılar üçün peşəkar ekran və dözümlülük.',r:[5,3,3,5]},
+{id:'mba',n:'MacBook Air',ty:'Noutbuk',t:'Yüngül, səssiz və bütün gün istifadə üçün hazırlanıb.',r:[4,5,2,5]},
+{id:'xps',n:'Dell XPS',ty:'Noutbuk',t:'Kənardan kənara ekranlı zərif Windows noutbuku.',r:[4,4,3,4]},
+{id:'tpx',n:'ThinkPad X1 Carbon',ty:'Noutbuk',t:'Əla klaviaturalı ultra yüngül biznes noutbuku.',r:[4,5,2,4]}],
+kb:[
+{id:"gpx",n:"Logitech G PRO",ty:"Oyun klaviaturası",t:"E-idman üçün hazırlanmış kompakt mexaniki oyun klaviaturası.",r:[4,4,5,2]},
+{id:"wtg",n:"Wooting 60HE",ty:"Oyun klaviaturası",t:"Sürətli və dəqiq giriş üçün tənzimlənən maqnit açarlar.",r:[4,5,5,2]}],
+ms:[
+{id:"mxm",n:"Logitech MX Master",ty:"Simsiz siçan",t:"Məhsuldarlıq üçün dəqiq sürüşdürmə təkəri olan erqonomik siçan.",r:[4,5,2,4]},
+{id:"mm",n:"Apple Magic Mouse",ty:"Simsiz siçan",t:"Çoxtoxunuşlu səthi olan alçaq profilli simsiz siçan.",r:[3,2,1,4]}],
+acc:[
+{id:"sony",n:"Sony WH-1000XM",ty:"Qulaqlıq",t:"Güclü səs-küy ləğvi ilə tanınan qulaqüstü simsiz qulaqlıq.",r:[5,3,2,5]},
+{id:"app",n:"Apple AirPods Pro",ty:"Qulaqlıq",t:"Səs-küy ləğvi və Apple cihazlarla asan qoşulma.",r:[4,5,1,4]}]};
+
+var curCat='comp';
+var selMap={comp:[],kb:[],ms:[],acc:[]};
+
+function $(i){return document.getElementById(i);}
+function el(t,c,x){var d=document.createElement(t);if(c)d.className=c;if(x!=null)d.textContent=x;return d;}
+
+function renderCards(){
+  var gr=$('gr');
+  gr.innerHTML='';
+  var items=P[curCat]||[];
+  var sel=selMap[curCat]||[];
+
+  items.forEach(function(p){
+    var isSel = sel.indexOf(p.id)!==-1;
+    var card=el('div','card'+(isSel?' sel':''));
+    card.innerHTML='<div class="ty">'+p.ty+'</div><h3>'+p.n+'</h3><div class="t">'+p.t+'</div>';
+
+    var sBtn=el('button','btn '+(isSel?'buy':'ghost'), isSel ? '✓ Seçildi' : 'Müqayisə et');
+    sBtn.addEventListener('click',function(){ toggleSel(p.id); });
+    card.appendChild(sBtn);
+    gr.appendChild(card);
+  });
+  renderTable();
+}
+
+function toggleSel(id){
+  var list=selMap[curCat];
+  var idx=list.indexOf(id);
+  if(idx>-1){ list.splice(idx,1); }
+  else{ if(list.length<3) list.push(id); }
+  renderCards();
+}
+
+function renderTable(){
+  var cm=$('cm');
+  cm.innerHTML='';
+  var sel=selMap[curCat]||[];
+  if(sel.length<2){
+    cm.innerHTML='<div class="hint">Yan-yana müqayisə etmək üçün ən azı iki məhsul seçin.</div>';
+    return;
+  }
+
+  var items=(P[curCat]||[]).filter(function(x){return sel.indexOf(x.id)>-1;});
+  var html='<div class="tw"><table><thead><tr><th></th>';
+  items.forEach(function(x){ html+='<th>'+x.n+'</th>'; });
+  html+='</tr></thead><tbody>';
+
+  var labels=['Performans', 'Portativlik', 'Oyun', 'Səmərəlilik'];
+  labels.forEach(function(lbl, rIdx){
+    html+='<tr><td>'+lbl+'</td>';
+    items.forEach(function(x){
+      html+='<td>'+(x.r[rIdx]||0)+'/5</td>';
+    });
+    html+='</tr>';
+  });
+
+  html+='</tbody></table></div>';
+  cm.innerHTML=html;
+}
+
+window.scrollToCompare = function(cat, ids){
+  curCat = cat;
+  selMap[cat] = ids;
+  Array.from($('tb').children).forEach(function(b){
+    b.setAttribute('aria-pressed', b.getAttribute('data-k') === cat ? 'true' : 'false');
+  });
+  renderCards();
+  $('compare').scrollIntoView({ behavior: 'smooth' });
+};
+
+document.addEventListener('DOMContentLoaded',function(){
+  $('tb').addEventListener('click',function(e){
+    if(e.target.tagName==='BUTTON'){
+      var k=e.target.getAttribute('data-k');
+      if(k){
+        curCat=k;
+        Array.from($('tb').children).forEach(function(b){b.setAttribute('aria-pressed','false');});
+        e.target.setAttribute('aria-pressed','true');
+        renderCards();
+      }
+    }
+  });
+  renderCards();
+});
+})();
+</script>
+</body>
+</html>
