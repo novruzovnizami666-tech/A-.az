@@ -58,31 +58,34 @@
         </div>
         
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight max-w-3xl mx-auto mb-4 leading-tight">
-            Texnologiyanı Saniyələr İçində <br/><span class="gold-text">Müqayisə Edin</span>
+            500+ Texnoloji Məhsulu <br/><span class="gold-text">Müqayisə Edin</span>
         </h1>
         
         <!-- Axtarış Zolağı -->
         <div class="max-w-xl mx-auto mt-6 relative">
-            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Axtarış edin (məs: MacBook, iPad, Quest 3...)" class="w-full bg-zinc-900 border border-zinc-800 rounded-2xl py-3.5 pl-12 pr-4 text-sm focus:border-yellow-500 outline-none text-white transition shadow-xl">
+            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Axtarış edin (məs: MacBook, iPad, Quest, AirPods, Watch...)" class="w-full bg-zinc-900 border border-zinc-800 rounded-2xl py-3.5 pl-12 pr-4 text-sm focus:border-yellow-500 outline-none text-white transition shadow-xl">
             <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-zinc-500"></i>
         </div>
 
         <!-- Kateqoriya Düymələri -->
         <div class="flex flex-wrap justify-center gap-3 mt-8">
             <button onclick="filterCategory('all')" class="cat-btn bg-yellow-500 text-black font-bold px-4 py-2 rounded-xl text-sm transition">Hamısı</button>
-            <button onclick="filterCategory('laptops')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">💻 Kompüterlər</button>
-            <button onclick="filterCategory('tablets')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">📱 Planşetlər</button>
-            <button onclick="filterCategory('vr')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🥽 VR Eynəklər</button>
-            <button onclick="filterCategory('headphones')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🎧 Qulaqlıqlar</button>
-            <button onclick="filterCategory('watches')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">⌚ Ağıllı Saatlar</button>
+            <button onclick="filterCategory('laptops')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">💻 Kompüterlər (100)</button>
+            <button onclick="filterCategory('tablets')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">📱 Planşetlər (100)</button>
+            <button onclick="filterCategory('vr')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🥽 VR Eynəklər (100)</button>
+            <button onclick="filterCategory('headphones')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🎧 Qulaqlıqlar (100)</button>
+            <button onclick="filterCategory('watches')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">⌚ Ağıllı Saatlar (100)</button>
         </div>
     </section>
 
     <!-- Məhsullar Grid -->
     <main class="max-w-7xl mx-auto px-4 py-6 flex-grow w-full">
-        <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
-            <i class="fa-solid fa-layer-group text-yellow-400"></i>
-            <span>Məhsul Kataloqu</span>
+        <h2 class="text-xl font-bold mb-6 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-yellow-400"></i>
+                <span>Məhsul Kataloqu</span>
+            </div>
+            <span id="productCount" class="text-xs text-zinc-400 font-normal">Göstərilir: 500 məhsul</span>
         </h2>
         
         <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -137,44 +140,83 @@
         &copy; 2026 Base.Az. Bütün hüquqlar qorunur.
     </footer>
 
-    <!-- Genişləndirilmiş Məhsul Bazası -->
+    <!-- 500 Məhsulluq Avtomatik Generasiya Olunan Veritabanı -->
     <script>
-        const products = [
-            // Kompüterlər
-            { name: "Apple MacBook Pro 16 M3 Max", cat: "laptops", icon: "laptop", specs: ["36GB RAM", "1TB SSD", "Liquid Retina XDR"], price: "5,400 AZN" },
-            { name: "Apple MacBook Air 15 M3", cat: "laptops", icon: "laptop", specs: ["16GB RAM", "512GB SSD", "18 Saat Batareya"], price: "2,850 AZN" },
-            { name: "ASUS ROG Zephyrus G16", cat: "laptops", icon: "laptop", specs: ["32GB RAM", "1TB SSD", "RTX 4080 12GB"], price: "4,600 AZN" },
-            { name: "MSI Raider GE78 HX", cat: "laptops", icon: "laptop", specs: ["64GB RAM", "2TB SSD", "RTX 4090 16GB"], price: "6,900 AZN" },
-            { name: "Lenovo Legion Pro 7i", cat: "laptops", icon: "laptop", specs: ["32GB RAM", "1TB SSD", "RTX 4070"], price: "3,900 AZN" },
-            
-            // Planşetlər
-            { name: "Apple iPad Pro 13 M4 (2024)", cat: "tablets", icon: "tablet-screen-button", specs: ["16GB RAM", "1TB Storage", "Ultra Retina Tandem OLED"], price: "3,500 AZN" },
-            { name: "Apple iPad Air 13 (M2)", cat: "tablets", icon: "tablet-screen-button", specs: ["8GB RAM", "256GB Storage", "Liquid Retina Display"], price: "2,150 AZN" },
-            { name: "Samsung Galaxy Tab S9 Ultra", cat: "tablets", icon: "tablet-screen-button", specs: ["12GB RAM", "512GB Storage", "Dynamic AMOLED 2X 120Hz"], price: "2,400 AZN" },
-            { name: "Xiaomi Pad 6 Pro", cat: "tablets", icon: "tablet-screen-button", specs: ["8GB RAM", "256GB Storage", "Snapdragon 8+ Gen 1"], price: "950 AZN" },
+        const products = [];
+        
+        // Kompüterlər (100 ədəd)
+        const laptopBrands = ["Apple MacBook Pro", "Apple MacBook Air", "ASUS ROG Zephyrus", "ASUS TUF Gaming", "MSI Raider", "MSI Katana", "Lenovo Legion", "Lenovo ThinkPad", "Acer Predator", "HP Omen"];
+        const laptopProcs = ["M3 Max", "M3 Pro", "M2", "Intel Core i9-14900HX", "AMD Ryzen 9 7945HX", "Intel Core i7-14700HX"];
+        const laptopGpus = ["RTX 4090 16GB", "RTX 4080 12GB", "RTX 4070 8GB", "RTX 4060 8GB", "Integrated Liquid Retina"];
+        
+        for(let i = 1; i <= 100; i++) {
+            let brand = laptopBrands[i % laptopBrands.length];
+            products.push({
+                name: `${brand} Gen-${i} (${laptopProcs[i % laptopProcs.length]})`,
+                cat: "laptops",
+                icon: "laptop",
+                specs: [`${(i % 3 === 0) ? 64 : (i % 2 === 0 ? 32 : 16)}GB RAM`, `${(i % 2 === 0) ? '2TB' : '1TB'} SSD`, laptopGpus[i % laptopGpus.length]],
+                price: `${1800 + (i * 45)} AZN`
+            });
+        }
 
-            // VR Eynəklər
-            { name: "Meta Quest 3", cat: "vr", icon: "vr-cardboard", specs: ["4K+ Infinite Display", "128GB Storage", "Snapdragon XR2 Gen 2"], price: "1,150 AZN" },
-            { name: "Apple Vision Pro", cat: "vr", icon: "vr-cardboard", specs: ["Dual micro-OLED", "256GB Storage", "M2 + R1 Custom Chips"], price: "7,500 AZN" },
-            { name: "PlayStation VR2", cat: "vr", icon: "vr-cardboard", specs: ["OLED 2000x2040 per eye", "Haptic Feedback", "Tempest 3D Audio"], price: "1,300 AZN" },
-            { name: "Meta Quest Pro", cat: "vr", icon: "vr-cardboard", specs: ["Local Dimming Backlight", "Eye & Face Tracking", "256GB Storage"], price: "2,200 AZN" },
+        // Planşetlər (100 ədəd)
+        const tabletBrands = ["Apple iPad Pro", "Apple iPad Air", "Samsung Galaxy Tab S", "Xiaomi Pad", "Lenovo Tab P", "Huawei MatePad"];
+        for(let i = 1; i <= 100; i++) {
+            let brand = tabletBrands[i % tabletBrands.length];
+            products.push({
+                name: `${brand} Ultra Series ${i}`,
+                cat: "tablets",
+                icon: "tablet-screen-button",
+                specs: [`${(i % 2 === 0) ? 16 : 8}GB RAM`, `${(i % 3 === 0) ? 512 : 256}GB Storage`, `AMOLED 120Hz Screen`],
+                price: `${700 + (i * 25)} AZN`
+            });
+        }
 
-            // Qulaqlıqlar
-            { name: "Apple AirPods Max", cat: "headphones", icon: "headphones", specs: ["Active Noise Cancelling", "Spatial Audio", "20 Saat Batareya"], price: "1,250 AZN" },
-            { name: "Sony WH-1000XM5", cat: "headphones", icon: "headphones", specs: ["Industry-Leading ANC", "30 Saat Batareya", "Hi-Res Audio Wireless"], price: "780 AZN" },
-            { name: "Bose QuietComfort Ultra", cat: "headphones", icon: "headphones", specs: ["CustomTune Technology", "Immersive Audio", "24 Saat Batareya"], price: "890 AZN" },
-            { name: "Apple AirPods Pro 2 (USB-C)", cat: "headphones", icon: "headphones", specs: ["Adaptive Audio", "Transparency Mode", "MagSafe Case"], price: "580 AZN" },
+        // VR Eynəklər (100 ədəd)
+        const vrBrands = ["Meta Quest", "Apple Vision", "PlayStation VR", "HTC Vive", "Pimax Crystal"];
+        for(let i = 1; i <= 100; i++) {
+            let brand = vrBrands[i % vrBrands.length];
+            products.push({
+                name: `${brand} Edition v${i}`,
+                cat: "vr",
+                icon: "vr-cardboard",
+                specs: [`4K+ Micro-OLED`, `${(i % 2 === 0) ? 512 : 256}GB Storage`, `Spatial Audio & Tracking`],
+                price: `${1000 + (i * 50)} AZN`
+            });
+        }
 
-            // Ağıllı Saatlar
-            { name: "Apple Watch Ultra 2", cat: "watches", icon: "stopwatch", specs: ["Titanium Case 49mm", "Dual-Frequency GPS", "3000 nits Brightness"], price: "1,750 AZN" },
-            { name: "Apple Watch Series 9", cat: "watches", icon: "stopwatch", specs: ["S9 SiP Double Tap", "Always-On Retina", "Edge-to-Edge Display"], price: "980 AZN" },
-            { name: "Samsung Galaxy Watch 6 Classic", cat: "watches", icon: "stopwatch", specs: ["Physical Rotating Bezel", "BioActive Sensor Suite", "Sapphire Crystal"], price: "720 AZN" },
-            { name: "Garmin Fenix 7 Pro Sapphire", cat: "watches", icon: "stopwatch", specs: ["Solar Charging Glass", "Multi-band GPS", "22 Days Battery Life"], price: "2,100 AZN" }
-        ];
+        // Qulaqlıqlar (100 ədəd)
+        const audioBrands = ["Apple AirPods Max", "Sony WH-1000XM", "Bose QuietComfort", "Sennheiser Momentum", "JBL Tour One"];
+        for(let i = 1; i <= 100; i++) {
+            let brand = audioBrands[i % audioBrands.length];
+            products.push({
+                name: `${brand} Pro Mk-${i}`,
+                cat: "headphones",
+                icon: "headphones",
+                specs: [`Active Noise Cancelling (ANC)`, `${30} Saat Batareya Ömrü`, `Hi-Res Wireless Audio`],
+                price: `${350 + (i * 12)} AZN`
+            });
+        }
+
+        // Ağıllı Saatlar (100 ədəd)
+        const watchBrands = ["Apple Watch Ultra", "Apple Watch Series", "Samsung Galaxy Watch", "Garmin Fenix", "Huawei Watch GT"];
+        for(let i = 1; i <= 100; i++) {
+            let brand = watchBrands[i % watchBrands.length];
+            products.push({
+                name: `${brand} Titanium Ed. ${i}`,
+                cat: "watches",
+                icon: "stopwatch",
+                specs: [`Sapphire Crystal Glass`, `GPS + Cellular`, `BioActive Health Sensors`],
+                price: `${500 + (i * 18)} AZN`
+            });
+        }
 
         function renderProducts(items) {
             const grid = document.getElementById('productGrid');
+            const countLabel = document.getElementById('productCount');
             grid.innerHTML = '';
+            countLabel.innerText = `Göstərilir: ${items.length} məhsul`;
             
             if(items.length === 0) {
                 grid.innerHTML = '<div class="col-span-full text-center text-zinc-500 py-12">Heç bir məhsul tapılmadı.</div>';
@@ -204,6 +246,7 @@
         }
 
         function filterCategory(cat) {
+            // Düymələrin aktivliyini tənzimlə
             if(cat === 'all') {
                 renderProducts(products);
             } else {
@@ -214,7 +257,7 @@
 
         function searchProducts() {
             const query = document.getElementById('searchInput').value.toLowerCase();
-            const filtered = products.filter(p => p.name.toLowerCase().includes(query));
+            const filtered = products.filter(p => p.name.toLowerCase().includes(query) || p.specs.some(s => s.toLowerCase().includes(query)));
             renderProducts(filtered);
         }
 
@@ -225,7 +268,7 @@
             document.getElementById(id).classList.remove('active');
         }
 
-        // İlkin olaraq bütün məhsulları göstər
+        // İlkin olaraq bütün 500 məhsulu göstər
         renderProducts(products);
     </script>
 </body>
