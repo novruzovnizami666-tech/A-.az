@@ -57,18 +57,17 @@
             Doğru Texnologiyanı Seçin
         </div>
         
-        <!-- Orijinal Başlıq Bərpa Olundu -->
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight max-w-3xl mx-auto mb-4 leading-tight">
             Doğru Texnologiyanı <br/><span class="gold-text">Bizimlə Seçin</span>
         </h1>
         
         <!-- Axtarış Zolağı -->
         <div class="max-w-xl mx-auto mt-6 relative">
-            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Axtarış edin (məs: MacBook, iPad, Quest, AirPods, Watch...)" class="w-full bg-zinc-900 border border-zinc-800 rounded-2xl py-3.5 pl-12 pr-4 text-sm focus:border-yellow-500 outline-none text-white transition shadow-xl">
+            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="İstədiyiniz markanı axtarın (MacBook, iPad, Quest, AirPods, Watch...)" class="w-full bg-zinc-900 border border-zinc-800 rounded-2xl py-3.5 pl-12 pr-4 text-sm focus:border-yellow-500 outline-none text-white transition shadow-xl">
             <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-zinc-500"></i>
         </div>
 
-        <!-- Kateqoriya Düymələri -->
+        <!-- Kateqoriya Düymələri (Rəqəmsiz) -->
         <div class="flex flex-wrap justify-center gap-3 mt-8">
             <button onclick="filterCategory('all')" class="cat-btn bg-yellow-500 text-black font-bold px-4 py-2 rounded-xl text-sm transition">Hamısı</button>
             <button onclick="filterCategory('laptops')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">💻 Kompüterlər</button>
@@ -86,7 +85,7 @@
                 <i class="fa-solid fa-layer-group text-yellow-400"></i>
                 <span>Məhsul Kataloqu</span>
             </div>
-            <span id="productCount" class="text-xs text-zinc-400 font-normal">Göstərilir: 500 məhsul</span>
+            <span id="productCount" class="text-xs text-zinc-400 font-normal"></span>
         </h2>
         
         <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -141,25 +140,25 @@
         &copy; 2026 Base.Az. Bütün hüquqlar qorunur.
     </footer>
 
-    <!-- Məhsul Veritabanı (500 ədəd) -->
+    <!-- Sürətli və Genişləndirilmiş Məhsul Bazası -->
     <script>
         const products = [];
         
+        // Kompüterlər
         const laptopBrands = ["Apple MacBook Pro", "Apple MacBook Air", "ASUS ROG Zephyrus", "ASUS TUF Gaming", "MSI Raider", "MSI Katana", "Lenovo Legion", "Lenovo ThinkPad", "Acer Predator", "HP Omen"];
-        const laptopProcs = ["M3 Max", "M3 Pro", "M2", "Intel Core i9-14900HX", "AMD Ryzen 9 7945HX", "Intel Core i7-14700HX"];
-        const laptopGpus = ["RTX 4090 16GB", "RTX 4080 12GB", "RTX 4070 8GB", "RTX 4060 8GB", "Integrated Liquid Retina"];
-        
+        const laptopProcs = ["M3 Max", "M3 Pro", "M2", "Intel Core i9", "AMD Ryzen 9", "Intel Core i7"];
         for(let i = 1; i <= 100; i++) {
             let brand = laptopBrands[i % laptopBrands.length];
             products.push({
                 name: `${brand} Gen-${i} (${laptopProcs[i % laptopProcs.length]})`,
                 cat: "laptops",
                 icon: "laptop",
-                specs: [`${(i % 3 === 0) ? 64 : (i % 2 === 0 ? 32 : 16)}GB RAM`, `${(i % 2 === 0) ? '2TB' : '1TB'} SSD`, laptopGpus[i % laptopGpus.length]],
+                specs: [`${(i % 2 === 0) ? 32 : 16}GB RAM`, `${(i % 2 === 0) ? '2TB' : '1TB'} SSD`, `RTX / Retina Grafik`],
                 price: `${1800 + (i * 45)} AZN`
             });
         }
 
+        // Planşetlər
         const tabletBrands = ["Apple iPad Pro", "Apple iPad Air", "Samsung Galaxy Tab S", "Xiaomi Pad", "Lenovo Tab P", "Huawei MatePad"];
         for(let i = 1; i <= 100; i++) {
             let brand = tabletBrands[i % tabletBrands.length];
@@ -167,11 +166,12 @@
                 name: `${brand} Ultra Series ${i}`,
                 cat: "tablets",
                 icon: "tablet-screen-button",
-                specs: [`${(i % 2 === 0) ? 16 : 8}GB RAM`, `${(i % 3 === 0) ? 512 : 256}GB Storage`, `AMOLED 120Hz Screen`],
+                specs: [`${(i % 2 === 0) ? 16 : 8}GB RAM`, `256GB Storage`, `AMOLED 120Hz Screen`],
                 price: `${700 + (i * 25)} AZN`
             });
         }
 
+        // VR Eynəklər
         const vrBrands = ["Meta Quest", "Apple Vision", "PlayStation VR", "HTC Vive", "Pimax Crystal"];
         for(let i = 1; i <= 100; i++) {
             let brand = vrBrands[i % vrBrands.length];
@@ -179,11 +179,12 @@
                 name: `${brand} Edition v${i}`,
                 cat: "vr",
                 icon: "vr-cardboard",
-                specs: [`4K+ Micro-OLED`, `${(i % 2 === 0) ? 512 : 256}GB Storage`, `Spatial Audio & Tracking`],
+                specs: [`4K+ Micro-OLED`, `256GB Storage`, `Spatial Audio & Tracking`],
                 price: `${1000 + (i * 50)} AZN`
             });
         }
 
+        // Qulaqlıqlar
         const audioBrands = ["Apple AirPods Max", "Sony WH-1000XM", "Bose QuietComfort", "Sennheiser Momentum", "JBL Tour One"];
         for(let i = 1; i <= 100; i++) {
             let brand = audioBrands[i % audioBrands.length];
@@ -191,11 +192,12 @@
                 name: `${brand} Pro Mk-${i}`,
                 cat: "headphones",
                 icon: "headphones",
-                specs: [`Active Noise Cancelling (ANC)`, `${30} Saat Batareya Ömrü`, `Hi-Res Wireless Audio`],
+                specs: [`Active Noise Cancelling (ANC)`, `30 Saat Batareya Ömrü`, `Hi-Res Wireless Audio`],
                 price: `${350 + (i * 12)} AZN`
             });
         }
 
+        // Ağıllı Saatlar
         const watchBrands = ["Apple Watch Ultra", "Apple Watch Series", "Samsung Galaxy Watch", "Garmin Fenix", "Huawei Watch GT"];
         for(let i = 1; i <= 100; i++) {
             let brand = watchBrands[i % watchBrands.length];
@@ -210,16 +212,17 @@
 
         function renderProducts(items) {
             const grid = document.getElementById('productGrid');
-            const countLabel = document.getElementById('productCount');
             grid.innerHTML = '';
-            countLabel.innerText = `Göstərilir: ${items.length} məhsul`;
             
             if(items.length === 0) {
                 grid.innerHTML = '<div class="col-span-full text-center text-zinc-500 py-12">Heç bir məhsul tapılmadı.</div>';
                 return;
             }
 
-            items.forEach(p => {
+            // Performans üçün ilk 30 məhsulu göstər (qalanları axtarış zamanı çıxacaq)
+            const displayItems = items.slice(0, 30);
+
+            displayItems.forEach(p => {
                 const card = `
                     <div class="bg-zinc-900/60 border border-zinc-800 hover:border-yellow-500/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
                         <div>
@@ -252,8 +255,40 @@
 
         function searchProducts() {
             const query = document.getElementById('searchInput').value.toLowerCase();
+            if(query.trim() === '') {
+                renderProducts(products);
+                return;
+            }
             const filtered = products.filter(p => p.name.toLowerCase().includes(query) || p.specs.some(s => s.toLowerCase().includes(query)));
-            renderProducts(filtered);
+            
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = '';
+            
+            if(filtered.length === 0) {
+                grid.innerHTML = '<div class="col-span-full text-center text-zinc-500 py-12">Axtarışa uyğun məhsul tapılmadı.</div>';
+                return;
+            }
+
+            filtered.forEach(p => {
+                const card = `
+                    <div class="bg-zinc-900/60 border border-zinc-800 hover:border-yellow-500/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center text-yellow-400 text-xl mb-4 group-hover:bg-yellow-500 group-hover:text-black transition">
+                                <i class="fa-solid fa-${p.icon}"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-white mb-2">${p.name}</h3>
+                            <ul class="text-xs text-zinc-400 space-y-1.5 mb-6">
+                                ${p.specs.map(s => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-[10px]"></i> ${s}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="flex items-center justify-between border-t border-zinc-800/80 pt-4 mt-2">
+                            <span class="font-bold text-yellow-400 text-base">${p.price}</span>
+                            <button onclick="alert('${p.name} müqayisə siyahısına əlavə olundu!')" class="bg-zinc-800 hover:bg-yellow-500 hover:text-black text-xs font-semibold px-3 py-2 rounded-lg transition">Müqayisə et</button>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
         }
 
         function openModal(id) {
