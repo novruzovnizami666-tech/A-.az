@@ -18,19 +18,20 @@ nav{position:sticky;top:0;z-index:50;background:rgba(7,7,10,.85);backdrop-filter
 .nb{display:flex;align-items:center;justify-content:space-between;height:60px}
 .logo{font-size:24px;font-weight:700;text-decoration:none;color:#fff}
 .logo i{font-style:normal;color:var(--gold)}
-.hero{text-align:center;padding:80px 0 40px}
+.hero{text-align:center;padding:70px 0 40px}
 .kick{color:var(--gold);font-weight:600;font-size:15px;margin-bottom:14px}
 h1{font-size:clamp(38px,7vw,72px);font-weight:700;margin:0 0 18px;letter-spacing:-.03em}
 h1 span{color:var(--gold)}
-.sub{font-size:18px;color:var(--mut);max-width:32em;margin:0 auto 40px;line-height:1.5}
-.hero-slider-wrap{margin:30px 0;overflow:hidden;padding:10px 0}
-.hero-slider{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-.cmp-card{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:16px;padding:20px 24px;width:280px;text-align:left;cursor:pointer;transition:.2s}
-.cmp-card:hover{border-color:var(--gold);transform:translateY(-3px)}
-.cmp-card .badge{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;margin-bottom:6px;display:block}
-.cmp-card .vs-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
-.cmp-card .vs-title span{color:var(--gold);font-size:13px}
-.cmp-card .desc{font-size:13px;color:var(--mut)}
+.sub{font-size:18px;color:var(--mut);max-width:32em;margin:0 auto 30px;line-height:1.5}
+
+/* Neon Tech Showcase (2-ci Seçim) */
+.neon-showcase{display:flex;justify-content:center;gap:20px;margin:30px auto;max-width:900px;flex-wrap:wrap}
+.neon-card{background:linear-gradient(145deg, rgba(255,255,255,0.05), rgba(226,190,128,0.02));border:1px solid var(--line);border-radius:20px;padding:24px;width:260px;text-align:center;transition:all .3s ease;cursor:pointer;position:relative;overflow:hidden}
+.neon-card:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 0 30px rgba(226,190,128,0.25)}
+.neon-icon{font-size:36px;margin-bottom:12px}
+.neon-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:6px}
+.neon-desc{font-size:13px;color:var(--mut)}
+
 section{padding:60px 0}
 h2{font-size:36px;font-weight:700;margin-bottom:10px}
 .lead{color:var(--mut);font-size:18px;margin-bottom:30px}
@@ -67,23 +68,22 @@ footer{margin-top:80px;border-top:1px solid var(--line);padding:30px 0;color:var
   <h1>Maşının <span>içində.</span></h1>
   <p class="sub">Hər qat dəqiqliklə hazırlanıb. Sonra müqayisə edirik ki, doğrusunu alasan.</p>
   
-  <div class="hero-slider-wrap">
-    <div class="hero-slider">
-      <div class="cmp-card" onclick="scrollToCompare('comp', ['mbp', 'xps'])">
-        <span class="badge">Top Noutbuk</span>
-        <div class="vs-title">MacBook Pro <span>VS</span> Dell XPS</div>
-        <div class="desc">macOS dözümlülüyü yoxsa Windows zərifliyi?</div>
-      </div>
-      <div class="cmp-card" onclick="scrollToCompare('ms', ['mxm', 'mm'])">
-        <span class="badge">Siçan Müqayisəsi</span>
-        <div class="vs-title">MX Master <span>VS</span> Magic Mouse</div>
-        <div class="desc">Erqonomik məhsuldarlıq yoxsa minimal dizayn?</div>
-      </div>
-      <div class="cmp-card" onclick="scrollToCompare('kb', ['wtg', 'gpx'])">
-        <span class="badge">Oyun Klaviaturası</span>
-        <div class="vs-title">Wooting 60HE <span>VS</span> Logitech G PRO</div>
-        <div class="desc">Maqnit açarlar yoxsa klassik e-idman?</div>
-      </div>
+  <!-- Neon Tech Showcase (2-ci Seçim) -->
+  <div class="neon-showcase">
+    <div class="neon-card" onclick="selectCatAndScroll('comp')">
+      <div class="neon-icon">💻</div>
+      <div class="neon-title">Noutbuklar</div>
+      <div class="neon-desc">Apple Silicon, Dell XPS & ThinkPad performansı</div>
+    </div>
+    <div class="neon-card" onclick="selectCatAndScroll('kb')">
+      <div class="neon-icon">⌨️</div>
+      <div class="neon-title">Klaviaturalar</div>
+      <div class="neon-desc">Mexaniki açarlar və e-idman modelləri</div>
+    </div>
+    <div class="neon-card" onclick="selectCatAndScroll('ms')">
+      <div class="neon-icon">🖱️</div>
+      <div class="neon-title">Siçanlar</div>
+      <div class="neon-desc">Erqonomik məhsuldarlıq və ultra yüngül sensorlar</div>
     </div>
   </div>
 </div></header>
@@ -188,9 +188,8 @@ function renderTable(){
   cm.innerHTML=html;
 }
 
-window.scrollToCompare = function(cat, ids){
+window.selectCatAndScroll = function(cat){
   curCat = cat;
-  selMap[cat] = ids;
   Array.from($('tb').children).forEach(function(b){
     b.setAttribute('aria-pressed', b.getAttribute('data-k') === cat ? 'true' : 'false');
   });
