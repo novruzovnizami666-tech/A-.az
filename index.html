@@ -67,7 +67,7 @@
             <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-zinc-500"></i>
         </div>
 
-        <!-- Kateqoriya Düymələri (Rəqəmsiz) -->
+        <!-- Kateqoriya Düymələri -->
         <div class="flex flex-wrap justify-center gap-3 mt-8">
             <button onclick="filterCategory('all')" class="cat-btn bg-yellow-500 text-black font-bold px-4 py-2 rounded-xl text-sm transition">Hamısı</button>
             <button onclick="filterCategory('laptops')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">💻 Kompüterlər</button>
@@ -140,25 +140,24 @@
         &copy; 2026 Base.Az. Bütün hüquqlar qorunur.
     </footer>
 
-    <!-- Sürətli və Genişləndirilmiş Məhsul Bazası -->
+    <!-- 500 Məhsulluq Avtomatik Baza (Hər kateqoriya 100 ədəd) -->
     <script>
         const products = [];
         
-        // Kompüterlər
+        // Kompüterlər (100)
         const laptopBrands = ["Apple MacBook Pro", "Apple MacBook Air", "ASUS ROG Zephyrus", "ASUS TUF Gaming", "MSI Raider", "MSI Katana", "Lenovo Legion", "Lenovo ThinkPad", "Acer Predator", "HP Omen"];
-        const laptopProcs = ["M3 Max", "M3 Pro", "M2", "Intel Core i9", "AMD Ryzen 9", "Intel Core i7"];
         for(let i = 1; i <= 100; i++) {
             let brand = laptopBrands[i % laptopBrands.length];
             products.push({
-                name: `${brand} Gen-${i} (${laptopProcs[i % laptopProcs.length]})`,
+                name: `${brand} Gen-${i}`,
                 cat: "laptops",
                 icon: "laptop",
-                specs: [`${(i % 2 === 0) ? 32 : 16}GB RAM`, `${(i % 2 === 0) ? '2TB' : '1TB'} SSD`, `RTX / Retina Grafik`],
+                specs: [`${(i % 2 === 0) ? 32 : 16}GB RAM`, `${(i % 2 === 0) ? '2TB' : '1TB'} SSD`, `RTX / Retina Ekran`],
                 price: `${1800 + (i * 45)} AZN`
             });
         }
 
-        // Planşetlər
+        // Planşetlər (100)
         const tabletBrands = ["Apple iPad Pro", "Apple iPad Air", "Samsung Galaxy Tab S", "Xiaomi Pad", "Lenovo Tab P", "Huawei MatePad"];
         for(let i = 1; i <= 100; i++) {
             let brand = tabletBrands[i % tabletBrands.length];
@@ -166,12 +165,12 @@
                 name: `${brand} Ultra Series ${i}`,
                 cat: "tablets",
                 icon: "tablet-screen-button",
-                specs: [`${(i % 2 === 0) ? 16 : 8}GB RAM`, `256GB Storage`, `AMOLED 120Hz Screen`],
+                specs: [`${(i % 2 === 0) ? 16 : 8}GB RAM`, `256GB Yaddaş`, `AMOLED 120Hz`],
                 price: `${700 + (i * 25)} AZN`
             });
         }
 
-        // VR Eynəklər
+        // VR Eynəklər (100)
         const vrBrands = ["Meta Quest", "Apple Vision", "PlayStation VR", "HTC Vive", "Pimax Crystal"];
         for(let i = 1; i <= 100; i++) {
             let brand = vrBrands[i % vrBrands.length];
@@ -179,12 +178,12 @@
                 name: `${brand} Edition v${i}`,
                 cat: "vr",
                 icon: "vr-cardboard",
-                specs: [`4K+ Micro-OLED`, `256GB Storage`, `Spatial Audio & Tracking`],
+                specs: [`4K+ Micro-OLED`, `256GB Yaddaş`, `Spatial Audio`],
                 price: `${1000 + (i * 50)} AZN`
             });
         }
 
-        // Qulaqlıqlar
+        // Qulaqlıqlar (100)
         const audioBrands = ["Apple AirPods Max", "Sony WH-1000XM", "Bose QuietComfort", "Sennheiser Momentum", "JBL Tour One"];
         for(let i = 1; i <= 100; i++) {
             let brand = audioBrands[i % audioBrands.length];
@@ -192,12 +191,12 @@
                 name: `${brand} Pro Mk-${i}`,
                 cat: "headphones",
                 icon: "headphones",
-                specs: [`Active Noise Cancelling (ANC)`, `30 Saat Batareya Ömrü`, `Hi-Res Wireless Audio`],
+                specs: [`Active Noise Cancelling (ANC)`, `30 Saat Batareya`, `Hi-Res Audio`],
                 price: `${350 + (i * 12)} AZN`
             });
         }
 
-        // Ağıllı Saatlar
+        // Ağıllı Saatlar (100)
         const watchBrands = ["Apple Watch Ultra", "Apple Watch Series", "Samsung Galaxy Watch", "Garmin Fenix", "Huawei Watch GT"];
         for(let i = 1; i <= 100; i++) {
             let brand = watchBrands[i % watchBrands.length];
@@ -205,7 +204,7 @@
                 name: `${brand} Titanium Ed. ${i}`,
                 cat: "watches",
                 icon: "stopwatch",
-                specs: [`Sapphire Crystal Glass`, `GPS + Cellular`, `BioActive Health Sensors`],
+                specs: [`Sapphire Crystal Glass`, `GPS + Cellular`, `BioActive Sensor`],
                 price: `${500 + (i * 18)} AZN`
             });
         }
@@ -219,7 +218,7 @@
                 return;
             }
 
-            // Performans üçün ilk 30 məhsulu göstər (qalanları axtarış zamanı çıxacaq)
+            // Sürətli açılması üçün ilk 30 məhsul göstərilir
             const displayItems = items.slice(0, 30);
 
             displayItems.forEach(p => {
