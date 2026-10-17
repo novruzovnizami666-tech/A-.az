@@ -1,120 +1,230 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="color-scheme" content="dark">
-
-    <!-- Əsas SEO Teqləri -->
-    <title>Base.Az - Kompüter, Klaviatura və Aksesuarların Müqayisəsi</title>
-    <meta name="title" content="Base.Az - Kompüter, Klaviatura və Aksesuarların Müqayisəsi">
-    <meta name="description" content="Base.Az (baseaz) platformasında süni intellekt vasitəsilə kompüterlər, klaviaturalar, siçanlar və digər texnoloji məhsulları rahatlıqla müqayisə edin.">
-    <meta name="keywords" content="Base.Az, baseaz, komputer muqayisesi, klaviatura muqayisesi, ai muqayise, base az">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Base.Az">
-
-    <!-- Google Search Console Doğrulama Teqi -->
-    <meta name="google-site-verification" content="s06bBuin6Di3V7Xot9gUZFyGdyPBR109oJ01QTGns" />
-
-    <!-- Open Graph (Sosial Şəbəkə Paylaşımları Üçün) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://baseaz.vercel.app/">
-    <meta property="og:title" content="Base.Az - Kompüter, Klaviatura və Aksesuarların Müqayisəsi">
-    <meta property="og:description" content="Base.Az platformasında texnoloji məhsulları rahatlıqla müqayisə edin.">
-
-    <!-- Schema.org (Google-un Brendi Tanıması Üçün) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Base.Az",
-        "alternateName": "baseaz",
-        "url": "https://baseaz.vercel.app/"
-    }
-    </script>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-        body {
-            background-color: #0f172a;
-            color: #f8fafc;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            padding: 2rem;
-            text-align: center;
-            border-bottom: 1px solid #1e293b;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            color: #38bdf8;
-            margin-bottom: 0.5rem;
-        }
-        header p {
-            color: #94a3b8;
-            font-size: 1.1rem;
-        }
-        main {
-            flex: 1;
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            width: 100%;
-        }
-        .card {
-            background-color: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        .card h2 {
-            color: #f1f5f9;
-            margin-bottom: 1rem;
-        }
-        .card p {
-            color: #cbd5e1;
-            line-height: 1.6;
-        }
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            border-top: 1px solid #1e293b;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Ai.az – Computers, keyboards, mice and accessories, compared</title>
+<meta name="description" content="Compare computers, keyboards, mice, headphones, monitors and hubs on Ai.az.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#07070A">
+<meta name="application-name" content="Ai.az">
+<meta name="apple-mobile-web-app-title" content="Ai.az">
+<link rel="canonical" href="https://ai-az.site/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307070A'/%3E%3Ctext x='29' y='43' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='30' fill='%23fff'%3EAi%3C/text%3E%3Ccircle cx='51' cy='44' r='4.5' fill='%23E2BE80'/%3E%3C/svg%3E">
+<meta property="og:site_name" content="Ai.az">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ai-az.site/">
+<meta property="og:title" content="Ai.az – Computers, keyboards, mice and accessories, compared">
+<meta property="og:description" content="Compare computers, keyboards, mice, headphones, monitors and hubs on Ai.az.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ai.az – Computers, keyboards, mice and accessories, compared">
+<meta name="twitter:description" content="Compare computers, keyboards, mice, headphones, monitors and hubs on Ai.az.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Ai.az","alternateName":"ai-az.site","url":"https://ai-az.site/","inLanguage":["az","tr","en"],"description":"Compare computers, keyboards, mice, headphones, monitors and hubs on Ai.az."}</script>
+<style>
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+:root{
+  --photo:url("https://unsplash.com/photos/SF7PHY1v0io/download?force=true&w=1920");
+  --bg:#07070A;--tx:#F5F5F7;--mut:#9A9AA3;--line:rgba(255,255,255,.1);
+  --gold:#E2BE80;--gold2:#B98A4A;--f:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.55 var(--f);padding-top:env(safe-area-inset-top,0px);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(7,7,10,.66);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);border-bottom:1px solid var(--line)}
+.nb{display:flex;align-items:center;justify-content:space-between;height:54px}
+.logo{font-size:22px;font-weight:700;letter-spacing:-.05em;text-decoration:none;text-shadow:0 0 22px rgba(255,255,255,.45)}
+.logo i{font-style:normal;color:var(--gold);font-weight:500}
+.nr{display:flex;align-items:center}
+.nl a{margin-left:24px;font-size:13.5px;color:#D2D2D7;text-decoration:none;transition:color .2s}
+.nl a:hover{color:#fff}
+.lang{position:relative;margin-left:22px}
+.lb{display:flex;align-items:center;gap:7px;font:600 13px var(--f);color:#E5E5EA;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:980px;padding:7px 12px;cursor:pointer;transition:all .2s}
+.lb:hover,.lb[aria-expanded=true]{border-color:var(--gold);color:#fff;box-shadow:0 0 20px rgba(226,190,128,.22)}
+.lb svg{display:block}
+.lm{position:absolute;right:0;top:calc(100% + 10px);min-width:176px;background:rgba(18,18,22,.94);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border:1px solid var(--line);border-radius:16px;padding:6px;box-shadow:0 24px 60px rgba(0,0,0,.6);z-index:60}
+.lm[hidden]{display:none}
+.lm button{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:500 14.5px var(--f);color:#E5E5EA;background:none;border:0;border-radius:10px;padding:10px 12px;cursor:pointer}
+.lm button:hover{background:rgba(255,255,255,.08)}
+.lm .cd{font-weight:700;color:var(--gold);width:24px}
+.lm button[aria-checked=true]{color:#fff}
+.lm button[aria-checked=true]:after{content:"✓";margin-left:auto;color:var(--gold)}
+.hero{position:relative;text-align:center;padding:76px 0 40px;overflow:hidden;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:var(--photo) center/cover no-repeat;opacity:.16;filter:grayscale(1) contrast(1.15)}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 45% at 50% 52%,rgba(226,190,128,.16),transparent 70%),linear-gradient(#07070A 0,rgba(7,7,10,.35) 35%,rgba(7,7,10,.5) 70%,#07070A 100%)}
+.kick{color:var(--gold);font-weight:600;font-size:15px;letter-spacing:.02em;margin:0 0 14px}
+h1{font-size:clamp(44px,9vw,104px);line-height:1;letter-spacing:-.05em;font-weight:700;margin:0 auto 18px;text-shadow:0 0 60px rgba(255,255,255,.32)}
+h1 .g{background:linear-gradient(180deg,#fff 25%,var(--gold) 120%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+.sub{font-size:clamp(18px,2.4vw,24px);color:var(--mut);max-width:30em;margin:0 auto;line-height:1.4}
+.stage{height:clamp(380px,62vw,660px);perspective:1500px;display:grid;place-items:center;margin-top:10px;touch-action:pan-y}
+.rig{position:relative;width:440px;height:280px;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-38deg) scale(var(--s,1));will-change:transform}
+.layer{position:absolute;inset:0;border-radius:16px;transform:translateZ(calc(var(--e,0) * var(--i) * 50px));transition:opacity .3s,filter .3s;filter:drop-shadow(0 0 16px rgba(226,190,128,.12))}
+.layer svg{display:block;width:100%;height:100%;border-radius:16px}
+.rig.hl .layer{opacity:.22}.rig.hl .layer.on{opacity:1;filter:drop-shadow(0 0 24px rgba(226,190,128,.7))}
+.legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:760px;margin:6px auto 0}
+.legend button{font:500 14px var(--f);color:#E5E5EA;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:980px;padding:8px 16px;cursor:pointer;backdrop-filter:blur(10px);transition:all .2s}
+.legend button:hover,.legend button.on{border-color:var(--gold);color:#fff;box-shadow:0 0 22px rgba(226,190,128,.25)}
+.legend button:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-right:9px;box-shadow:0 0 10px var(--gold)}
+.cue{margin-top:26px;color:var(--mut);font-size:13.5px}
+section{padding:96px 0 10px}
+h2{font-size:clamp(34px,6vw,68px);line-height:1.03;letter-spacing:-.04em;font-weight:700;margin:0 0 14px;text-shadow:0 0 40px rgba(255,255,255,.16)}
+.lead{color:var(--mut);font-size:20px;max-width:32em;margin:0 0 34px}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.glass{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:28px}
+.glass:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:conic-gradient(from var(--a),rgba(255,255,255,.08) 0 62%,rgba(226,190,128,.95) 82%,rgba(255,255,255,.08));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 7s linear infinite;pointer-events:none}
+@keyframes spin{to{--a:360deg}}
+.feat .glass{padding:30px}
+.feat h3{font-size:26px;line-height:1.12;letter-spacing:-.03em;margin:0 0 10px}
+.feat p{color:var(--mut);margin:0;font-size:16px}
+.sf{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 26px}
+.sf button{font:500 14px var(--f);color:#E5E5EA;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:980px;padding:8px 16px;cursor:pointer;transition:all .2s}
+.sf button:hover{border-color:rgba(255,255,255,.35)}
+.sf button[aria-pressed=true]{background:#F5F5F7;color:#111;border-color:#F5F5F7}
+.tabs{max-width:100%;overflow-x:auto;display:inline-flex;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:980px;padding:4px;margin-bottom:28px}
+.tabs button{white-space:nowrap;font:600 15px var(--f);color:#C9C9CF;background:none;border:0;border-radius:980px;padding:10px 26px;cursor:pointer;transition:all .25s}
+.tabs button[aria-pressed=true]{background:#F5F5F7;color:#111}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.card{padding:26px;display:flex;flex-direction:column;transition:transform .3s}
+.card:hover{transform:translateY(-4px)}
+.card.sel{box-shadow:0 0 0 1px var(--gold),0 24px 60px rgba(226,190,128,.18)}
+.ty{font-size:12.5px;font-weight:600;color:var(--gold);margin-bottom:6px}
+.card h3{font-size:25px;line-height:1.1;letter-spacing:-.03em;margin:0 0 8px}
+.card .t{color:var(--mut);font-size:15px;margin:0 0 14px;min-height:3em}
+.sp{padding:10px 0;border-top:1px solid var(--line);font-size:14px;display:flex;justify-content:space-between;gap:12px}
+.sp span{color:var(--mut);flex:none}.sp b{font-weight:500;text-align:right}
+.rt{margin:14px 0 20px;display:grid;gap:9px}
+.rr{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center;font-size:12.5px;color:var(--mut)}
+.bar{height:5px;border-radius:5px;background:rgba(255,255,255,.1);overflow:hidden}
+.bar b{display:block;height:100%;background:linear-gradient(90deg,var(--gold2),var(--gold),#fff);border-radius:5px;box-shadow:0 0 10px rgba(226,190,128,.7)}
+.acts{margin-top:auto;display:grid;gap:10px}
+.btn{display:block;text-align:center;font:600 16px var(--f);padding:13px 18px;border-radius:980px;text-decoration:none;border:0;cursor:pointer;transition:all .25s}
+.btn.buy{background:linear-gradient(135deg,#F3D9A6,var(--gold) 45%,var(--gold2));color:#1a1206;box-shadow:0 10px 30px rgba(226,190,128,.28)}
+.btn.buy:hover{box-shadow:0 14px 42px rgba(226,190,128,.5);transform:translateY(-1px)}
+.btn.ghost{background:rgba(255,255,255,.09);color:#fff}.btn.ghost:hover{background:rgba(255,255,255,.16)}
+.cmp{margin-top:34px}
+.hint{border:1px dashed rgba(255,255,255,.2);border-radius:24px;padding:34px 20px;text-align:center;color:var(--mut)}
+.tw{overflow-x:auto;border-radius:28px;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;min-width:620px}
+th,td{padding:16px 20px;text-align:left;border-bottom:1px solid var(--line);font-size:15px;vertical-align:middle}
+th{font-size:19px;letter-spacing:-.02em}
+th:first-child,td:first-child{color:var(--mut);font-weight:500;font-size:14px;width:140px}
+tr:last-child td{border-bottom:0}
+td.best{color:#fff;font-weight:600}
+footer{margin-top:90px;border-top:1px solid var(--line);padding:30px 0 44px;color:var(--mut);font-size:13.5px}
+footer p{margin:0 0 8px;max-width:62em}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:860px){.feat{grid-template-columns:1fr}.rig{--s:.74}}
+@media(max-width:560px){.tabs button{padding:10px 15px;font-size:14px}.rig{--s:.54}.hero{padding-top:52px}section{padding-top:70px}.grid{grid-template-columns:1fr}.nl a:first-child{display:none}.nl a{margin-left:16px}.lang{margin-left:14px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
 </head>
 <body>
+<nav><div class="wrap nb"><a class="logo" href="#" aria-label="Ai.az">Ai<i>.az</i></a><div class="nr"><div class="nl"><a href="#inside" data-i="n1">Inside</a><a href="#compare" data-i="n2">Compare</a></div>
+  <div class="lang"><button class="lb" id="lb" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg><span id="lc">EN</span><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg></button><div class="lm" id="lm" role="menu" hidden></div></div></div></div></nav>
 
-    <header>
-        <h1>Base.Az</h1>
-        <p>Süni İntellekt ilə Texnoloji Məhsulların Ağıllı Müqayisə Platforması</p>
-    </header>
+<header class="hero" id="top"><div class="wrap">
+  <p class="kick" data-i="kick">Precision, layer by layer</p>
+  <h1><span data-i="h1a">Inside the</span> <span class="g" data-i="h1b">machine.</span></h1>
+  <p class="sub" data-i="sub">Every layer, engineered. Then compared, so you buy the right one.</p>
+  <div class="stage" id="stage" aria-hidden="true"><div class="rig" id="rig"></div></div>
+  <div class="legend" id="lg" role="group" aria-label="Components"></div>
+  <p class="cue" data-i="cue">Scroll to pull it apart</p>
+</div></header>
 
-    <main>
-        <div class="card">
-            <h2>Xoş Gəlmisiniz!</h2>
-            <p><strong>Base.Az</strong> (baseaz) — kompüterlər, mexaniki klaviaturalar, oyun siçanları və digər texnoloji aksesuarları ən dəqiq parametrlərlə müqayisə etməyiniz üçün yaradılmış yeni nəsil platformadır.</p>
-        </div>
+<main class="wrap">
+  <section id="inside">
+    <h2 class="rv" data-i="s1h">Built from the inside out.</h2>
+    <p class="lead rv" data-i="s1p">The parts you never see decide everything you feel.</p>
+    <div class="feat">
+      <div class="glass rv"><h3 data-i="f1h">The display</h3><p data-i="f1p">Brightness, refresh rate and color accuracy shape every hour you spend looking at it.</p></div>
+      <div class="glass rv"><h3 data-i="f2h">The silicon</h3><p data-i="f2p">Processor and graphics decide what runs smoothly, from editing video to rendering games.</p></div>
+      <div class="glass rv"><h3 data-i="f3h">The cooling</h3><p data-i="f3p">Fans and copper heat pipes keep performance steady when the load stays high.</p></div>
+    </div>
+  </section>
 
-        <div class="card">
-            <h2>Tezliklə</h2>
-            <p>Süny intellekt dəstəkli müqayisə alətlərimiz və geniş məhsul bazamız aktivləşir. Ən son texnoloji yenilikləri izləmək və doğru seçim etmək üçün bizimlə qalın!</p>
-        </div>
-    </main>
+  <section id="compare">
+    <h2 class="rv" data-i="ch">Compare.</h2>
+    <p class="lead rv" data-i="cp">Pick a category, select up to three, and see them side by side.</p>
+    <div class="tabs" id="tb" role="group" aria-label="Category"><button type="button" aria-pressed="true" data-k="comp" data-i="tcomp">Computers</button><button type="button" aria-pressed="false" data-k="kb" data-i="tkb">Keyboards</button><button type="button" aria-pressed="false" data-k="ms" data-i="tms">Mice</button><button type="button" aria-pressed="false" data-k="acc" data-i="tacc">Accessories</button></div>
+    <div class="sf" id="sf" role="group"></div>
+    <div class="grid" id="gr"></div>
+    <div class="cmp" id="cm"></div>
+  </section>
+</main>
 
-    <footer>
-        <p>&copy; 2026 Base.Az. Bütün hüquqlar qorunur.</p>
-    </footer>
+<footer><div class="wrap">
+  <p><b>Ai.az</b> · <span data-i="fo1">Specifications are general and vary by model, year and configuration. Check the seller's official listing before you buy. Ratings are our overall impression, not lab results.</span></p>
+  <p data-i="fo2">Some "Buy Now" links may be affiliate links. If you purchase through them, we may earn a commission at no extra cost to you.</p>
+  <p>© 2026 Ai.az · ai-az.site</p>
+</div></footer>
 
-</body>
-</html>
+<script>
+(function(){
+'use strict';
+var LINKS={};
+var RN=[];
+var P={
+comp:[
+{id:'mbp',n:'MacBook Pro 14"',ty:'Laptop',t:'Pro-grade display and endurance for creators and developers.',s:[['Key tech','Apple silicon (M-series)'],['Strength','Display and battery life'],['Best for','Video, code, design']],r:[5,3,3,5],g:["Laptop"]},
+{id:'mba',n:'MacBook Air',ty:'Laptop',t:'Light, silent and built for all-day use.',s:[['Key tech','Apple silicon (M-series)'],['Strength','Weight and battery life'],['Best for','Students, travel']],r:[4,5,2,5],g:["Laptop"]},
+{id:'xps',n:'Dell XPS',ty:'Laptop',t:'A refined Windows laptop with an edge-to-edge display.',s:[['Key tech','Intel Core Ultra'],['Strength','Premium build and screen'],['Best for','Work, creative']],r:[4,4,3,4],g:["Laptop"]},
+{id:'tpx',n:'ThinkPad X1 Carbon',ty:'Laptop',t:'Ultralight business machine with a great keyboard.',s:[['Key tech','Intel Core Ultra'],['Strength','Light and durable'],['Best for','Business, travel']],r:[4,5,2,4],g:["Laptop"]},
+{id:'rog',n:'ASUS ROG Zephyrus',ty:'Gaming laptop',t:'High-refresh display and a powerful discrete GPU.',s:[['Key tech','Ryzen or Core Ultra + RTX'],['Strength','Display and GPU power'],['Best for','Gaming, creation']],r:[5,2,5,3],g:["Laptop", "Gaming"]},
+{id:'leg',n:'Lenovo Legion',ty:'Gaming laptop',t:'Gaming laptop with a focus on cooling and keyboard feel.',s:[['Key tech','Core or Ryzen + RTX'],['Strength','Cooling design'],['Best for','Competitive gaming']],r:[5,2,5,3],g:["Laptop", "Gaming"]},
+{id:"mini",n:"Mac mini",ty:"Desktop",t:"Compact desktop with Apple silicon, quiet and efficient.",s:S3("Apple silicon (M-series)","Tiny size, low power use","Home office, creative work"),r:[4, 2, 2, 5],g:["Desktop"]},
+{id:"pc",n:"Custom gaming PC",ty:"Desktop",t:"A desktop built around a strong GPU and CPU, easy to upgrade.",s:S3("Ryzen X3D or Core + GeForce RTX","Top gaming power, upgradeable","Gaming, streaming"),r:[5, 1, 5, 3],g:["Desktop", "Gaming"]}],
+kb:[
+{id:"kc",n:"Keychron Q / K series",ty:"Mechanical keyboard",t:"Wireless mechanical keyboards with hot-swappable switches and Mac/Windows layouts.",s:S3("Mechanical, Bluetooth + wired","Customizable switches, solid build","Typing, work, enthusiasts"),r:[5, 3, 3, 4],g:["Mechanical", "Wireless", "Office"]},
+{id:"mx",n:"Logitech MX Keys",ty:"Wireless keyboard",t:"Slim, quiet wireless keyboard that pairs with several devices.",s:S3("Low-profile keys, backlight, multi-device","Comfortable, quiet typing","Office, long work days"),r:[4, 4, 1, 5],g:["Wireless", "Office"]},
+{id:"mk",n:"Apple Magic Keyboard",ty:"Wireless keyboard",t:"Slim wireless keyboard made to pair easily with Mac, iPad and iPhone.",s:S3("Scissor-switch keys, Bluetooth","Clean design, easy Apple pairing","Mac users, minimal desks"),r:[3, 5, 1, 4],g:["Wireless", "Office"]},
+{id:"gpx",n:"Logitech G PRO",ty:"Gaming keyboard",t:"Compact mechanical gaming keyboard built for esports.",s:S3("Mechanical, tenkeyless, swappable switches","Compact size, fast response","Competitive gaming"),r:[4, 4, 5, 2],g:["Mechanical", "Gaming"]},
+{id:"wtg",n:"Wooting 60HE",ty:"Gaming keyboard",t:"Magnetic switches with adjustable actuation for fast, precise input.",s:S3("Hall-effect magnetic switches","Adjustable actuation, rapid trigger","Esports, enthusiasts"),r:[4, 5, 5, 2],g:["Gaming"]}],
+ms:[
+{id:"mxm",n:"Logitech MX Master",ty:"Wireless mouse",t:"Ergonomic wireless mouse with a precise scroll wheel for productivity.",s:S3("Ergonomic shape, multi-device, fast scroll","Comfort for long hours","Office, creative work"),r:[4, 5, 2, 4],g:["Wireless", "Ergonomic", "Office"]},
+{id:"sl",n:"Logitech G PRO X Superlight",ty:"Gaming mouse",t:"Ultralight wireless mouse designed for esports.",s:S3("Ultralight wireless, high-precision sensor","Very low weight","Competitive gaming"),r:[5, 3, 5, 4],g:["Wireless", "Gaming"]},
+{id:"da",n:"Razer DeathAdder",ty:"Gaming mouse",t:"A classic ergonomic gaming mouse shape with a precise sensor.",s:S3("Ergonomic right-hand shape, optical sensor","Comfortable grip, accurate tracking","Gaming, long sessions"),r:[5, 5, 5, 2],g:["Gaming", "Ergonomic"]},
+{id:"mm",n:"Apple Magic Mouse",ty:"Wireless mouse",t:"Low-profile wireless mouse with a multi-touch surface.",s:S3("Multi-touch surface, Bluetooth","Clean look, gesture scrolling","Mac users, light office use"),r:[3, 2, 1, 4],g:["Wireless", "Office"]},
+{id:"mxa",n:"Logitech MX Anywhere",ty:"Wireless mouse",t:"Compact travel mouse that works on many surfaces.",s:S3("Compact, multi-device, precise sensor","Portable and versatile","Travel, laptop users"),r:[4, 3, 2, 4],g:["Wireless", "Office"]}],
+acc:[
+{id:"sony",n:"Sony WH-1000XM",ty:"Headphones",t:"Over-ear wireless headphones known for strong noise cancelling.",s:S3("Wireless, active noise cancelling","Noise cancelling, comfort","Travel, focus, commuting"),r:[5, 3, 2, 5],g:["Headphones"]},
+{id:"app",n:"Apple AirPods Pro",ty:"Headphones",t:"In-ear earbuds with noise cancelling and easy Apple device pairing.",s:S3("In-ear, active noise cancelling","Compact, easy pairing with Apple devices","iPhone and Mac users, on the go"),r:[4, 5, 1, 4],g:["Headphones"]},
+{id:"lg",n:"LG UltraGear",ty:"Gaming monitor",t:"Gaming monitors with high refresh rates and fast response.",s:S3("High refresh rate, fast response panel","Smooth motion in games","Gaming, fast-paced content"),r:[4, 1, 5, 3],g:["Monitors"]},
+{id:"dul",n:"Dell UltraSharp",ty:"Professional monitor",t:"Color-accurate monitors for design, editing and office work.",s:S3("IPS-type panel, color accuracy","Accurate colors, USB-C options","Design, editing, office"),r:[5, 1, 2, 5],g:["Monitors"]},
+{id:"anh",n:"Anker USB-C Hub",ty:"USB hub",t:"Affordable USB-C hubs that add ports to thin laptops.",s:S3("USB-C hub: USB-A, HDMI, card reader (varies)","Added ports at a low price","Students, everyday laptops"),r:[3, 5, 1, 4],g:["Hubs"]},
+{id:"cal",n:"CalDigit TS4",ty:"Thunderbolt dock",t:"A full Thunderbolt dock that turns one cable into a complete desk setup.",s:S3("Thunderbolt 4 dock, many ports","One cable for the whole desk","Pro desks, multi-monitor setups"),r:[5, 2, 2, 5],g:["Hubs"]}]};
+function S3(a,b,c){return [["",a],["",b],["",c]];}
+var L=[['Display',0],['Keyboard',1],['Battery',2],['Mainboard',3],['Cooling',4],['Chassis',5]];
+var $=function(i){return document.getElementById(i)};
+function el(t,c,x){var d=document.createElement(t);if(c)d.className=c;if(x!=null)d.textContent=x;return d;}
+
+var TX={
+en:{n1:'Inside',n2:'Compare',kick:'Precision, layer by layer',h1a:'Inside the',h1b:'machine.',sub:'Every layer, engineered. Then compared, so you buy the right one.',cue:'Scroll to pull it apart',s1h:'Built from the inside out.',s1p:'The parts you never see decide everything you feel.',f1h:'The display',f1p:'Brightness, refresh rate and color accuracy shape every hour you spend looking at it.',f2h:'The silicon',f2p:'Processor and graphics decide what runs smoothly, from editing video to rendering games.',f3h:'The cooling',f3p:'Fans and copper heat pipes keep performance steady when the load stays high.',ch:'Compare.',cp:'Pick a category, select up to three, and see them side by side.',tlap:'Laptops',tgam:'Gaming',hint:'Select at least two products to compare them side by side.',cmp:'Compare',sel:'✓ Selected',buy:'Buy Now',buyAria:'Buy %s (opens in a new tab)',kt:'Key tech',st:'Strength',bf:'Best for',r1:'Performance',r2:'Portability',r3:'Gaming',r4:'Efficiency',l_Display:'Display',l_Keyboard:'Keyboard',l_Battery:'Battery',l_Mainboard:'Mainboard',l_Cooling:'Cooling',l_Chassis:'Chassis',lgA:'Components',tbA:'Category',lang:'Language',title:'Ai.az – Computers, keyboards, mice and accessories, compared',desc:'Compare computers, keyboards, mice, headphones, monitors and hubs on Ai.az.',fo1:"Specifications are general and vary by model, year and configuration. Check the seller's official listing before you buy. Ratings are our overall impression, not lab results.",fo2:'Some "Buy Now" links may be affiliate links. If you purchase through them, we may earn a commission at no extra cost to you.'},
+az:{n1:'İçəridə',n2:'Müqayisə',kick:'Dəqiqlik, qat-qat',h1a:'Maşının',h1b:'içində.',sub:'Hər qat dəqiqliklə hazırlanıb. Sonra müqayisə edirik ki, doğrusunu alasan.',cue:'Ayırmaq üçün aşağı sürüşdür',s1h:'Daxildən xaricə qurulub.',s1p:'Görmədiyin hissələr hiss etdiyin hər şeyi müəyyən edir.',f1h:'Ekran',f1p:'Parlaqlıq, yenilənmə tezliyi və rəng dəqiqliyi ona baxdığın hər saatı formalaşdırır.',f2h:'Prosessor',f2p:'Prosessor və qrafika videonun montajından oyunların işlənməsinə qədər nəyin rəvan işləyəcəyini müəyyən edir.',f3h:'Soyutma',f3p:'Soyuducular və mis istilik boruları yük yüksək qalanda performansı sabit saxlayır.',ch:'Müqayisə et.',cp:'Kateqoriya seç, üç məhsula qədər işarələ və yan-yana gör.',tlap:'Noutbuklar',tgam:'Oyun',hint:'Yan-yana müqayisə üçün ən azı iki məhsul seç.',cmp:'Müqayisə et',sel:'✓ Seçildi',buy:'İndi al',buyAria:'%s al (yeni tabda açılır)',kt:'Əsas texnologiya',st:'Üstünlük',bf:'Kimlər üçün',r1:'Performans',r2:'Portativlik',r3:'Oyun',r4:'Səmərəlilik',l_Display:'Ekran',l_Keyboard:'Klaviatura',l_Battery:'Batareya',l_Mainboard:'Ana plata',l_Cooling:'Soyutma',l_Chassis:'Korpus',lgA:'Komponentlər',tbA:'Kateqoriya',lang:'Dil',title:'Ai.az – Noutbuklar və oyun avadanlığı müqayisəsi',desc:'Maşının içində. Premium noutbukları və oyun avadanlığını Ai.az-da müqayisə et.',fo1:'Xüsusiyyətlər ümumidir və modelə, buraxılış ilinə və konfiqurasiyaya görə dəyişir. Almazdan əvvəl satıcının rəsmi elanını yoxla. Qiymətləndirmələr bizim ümumi təəssüratımızdır, laboratoriya nəticəsi deyil.',fo2:'Bəzi "İndi al" linkləri partnyor (affiliate) linkləri ola bilər. Bu linklərlə alış etsən, sənə əlavə xərc olmadan komissiya qazana bilərik.'},
+tr:{n1:'İçinde',n2:'Karşılaştır',kick:'Hassasiyet, katman katman',h1a:'Makinenin',h1b:'içinde.',sub:'Her katman özenle tasarlandı. Sonra karşılaştırıyoruz, böylece doğru olanı alırsın.',cue:'Parçalamak için aşağı kaydır',s1h:'İçten dışa inşa edildi.',s1p:'Görmediğin parçalar hissettiğin her şeyi belirler.',f1h:'Ekran',f1p:'Parlaklık, yenileme hızı ve renk doğruluğu ona baktığın her saati şekillendirir.',f2h:'İşlemci',f2p:'İşlemci ve grafik, video düzenlemeden oyun oynamaya kadar neyin akıcı çalışacağını belirler.',f3h:'Soğutma',f3p:'Fanlar ve bakır ısı boruları yük yüksek kaldığında performansı sabit tutar.',ch:'Karşılaştır.',cp:'Bir kategori seç, en fazla üç ürün işaretle ve yan yana gör.',tlap:'Dizüstü',tgam:'Oyun',hint:'Yan yana karşılaştırmak için en az iki ürün seç.',cmp:'Karşılaştır',sel:'✓ Seçildi',buy:'Şimdi al',buyAria:'%s satın al (yeni sekmede açılır)',kt:'Ana teknoloji',st:'Güçlü yön',bf:'Kimler için',r1:'Performans',r2:'Taşınabilirlik',r3:'Oyun',r4:'Verimlilik',l_Display:'Ekran',l_Keyboard:'Klavye',l_Battery:'Batarya',l_Mainboard:'Anakart',l_Cooling:'Soğutma',l_Chassis:'Kasa',lgA:'Bileşenler',tbA:'Kategori',lang:'Dil',title:'Ai.az – Dizüstü bilgisayarlar ve oyun donanımı karşılaştırması',desc:"Makinenin içinde. Premium dizüstü bilgisayarları ve oyun donanımını Ai.az'da karşılaştır.",fo1:'Özellikler geneldir ve modele, yıla ve yapılandırmaya göre değişir. Satın almadan önce satıcının resmi ilanını kontrol et. Puanlar genel izlenimimizdir, laboratuvar sonucu değildir.',fo2:'Bazı "Şimdi al" bağlantıları ortaklık (affiliate) bağlantısı olabilir. Bu bağlantılarla satın alırsan, sana ek maliyet olmadan komisyon kazanabiliriz.'}};
+
+var PX={
+az:{mbp:['Noutbuk','Yaradıcılar və proqramçılar üçün peşəkar ekran və dözümlülük.','Apple silicon (M seriyası)','Ekran və batareya ömrü','Video, kod, dizayn'],
+mba:['Noutbuk','Yüngül, səssiz və bütün gün istifadə üçün hazırlanıb.','Apple silicon (M seriyası)','Çəki və batareya ömrü','Tələbələr, səyahət'],
+xps:['Noutbuk','Kənardan kənara ekranlı zərif Windows noutbuku.','Intel Core Ultra','Premium keyfiyyət və ekran','İş, yaradıcılıq'],
+tpx:['Noutbuk','Əla klaviaturalı ultra yüngül biznes noutbuku.','Intel Core Ultra','Yüngül və davamlı','Biznes, səyahət'],
+rog:['Oyun noutbuku','Yüksək yenilənmə tezlikli ekran və güclü ayrıca videokart.','Ryzen və ya Core Ultra + RTX','Ekran və videokart gücü','Oyun, yaradıcılıq'],
+leg:['Oyun noutbuku','Soyutmaya və klaviatura hissinə diqqət yetirən oyun noutbuku.','Core və ya Ryzen + RTX','Soyutma dizaynı','Rəqabətli oyun'],
+rtx:['Videokart','Yüksək keyfiyyətli oyunlar üçün şüa izləmə və DLSS böyütmə.','RTX seriyalı GPU','Şüa izləmə, DLSS','Oyun kompüterləri'],
+x3d:['Prosessor','Oyunlarda kadr sürətini artıran böyük yığılmış keş yaddaş.','Zen nüvələri + 3D V-Cache','Oyun performansı','Oyun masaüstü kompüterləri']},
+tr:{mbp:['Dizüstü','İçerik üreticiler ve geliştiriciler için profesyonel ekran ve dayanıklılık.','Apple silicon (M serisi)','Ekran ve pil ömrü','Video, kod, tasarım'],
+mba:['Dizüstü','Hafif, sessiz ve gün boyu kullanım için tasarlandı.','Apple silicon (M serisi)','Ağırlık ve pil ömrü','Öğrenciler, seyahat'],
+xps:['Dizüstü','Kenardan kenara ekranlı zarif bir Windows dizüstü.','Intel Core Ultra','Premium yapı ve ekran','İş, yaratıcılık'],
+tpx:['Dizüstü','Harika klavyeli ultra hafif iş dizüstüsü.','Intel Core Ultra','Hafif ve dayanıklı','İş, seyahat'],
+rog:['Oyun dizüstüsü','Yüksek yenileme hızlı ekran ve güçlü ayrık ekran kartı.','Ryzen veya Core Ultra + RTX','Ekran ve ekran kartı gücü','Oyun, içerik üretimi'],
+leg:['Oyun dizüstüsü','Soğutmaya ve klavye hissine odaklanan oyun dizüstüsü.','Core veya Ryzen + RTX','Soğutma tasarımı','Rekabetçi oyun'],
+rtx:['Ekran kartı','Yüksek kaliteli oyunlar için ışın izleme ve DLSS ölçekleme.','RTX serisi GPU','Işın izleme, DLSS','Oyun bilgisayarları'],
+x3d:['İşlemci','Oyunlarda kare hızını artıran büyük yığılmış önbellek.','Zen çekirdekleri + 3D V-Cache','Oyun performansı','Oyun masaüstü bilgisayarları']}};
+Object.assign(PX.az,{"mini": ["Masaüstü", "Apple silicon ilə kiçik, səssiz və qənaətcil masaüstü kompüter.", "Apple silicon (M seriyası)", "Kiçik ölçü, az enerji sərfi", "Ev ofisi, yaradıcı iş"], "pc": ["Masaüstü", "Güclü videokart və prosessor ətrafında qurulmuş, yenilənməsi asan masaüstü.", "Ryzen X3D və ya Core + GeForce RTX", "Ən yüksək oyun gücü, yenilənə bilər", "Oyun, yayım (stream)"], "kc": ["Mexaniki klaviatura", "Dəyişdirilə bilən açarlı və Mac/Windows düzümlü simsiz mexaniki klaviaturalar.", "Mexaniki, Bluetooth + simli", "Fərdiləşdirilən açarlar, möhkəm quruluş", "Yazı, iş, həvəskarlar"], "mx": ["Simsiz klaviatura", "Bir neçə cihazla qoşulan nazik və səssiz simsiz klaviatura.", "Alçaq düymələr, işıqlandırma, çoxcihazlı", "Rahat və səssiz yazı", "Ofis, uzun iş günləri"], "mk": ["Simsiz klaviatura", "Mac, iPad və iPhone ilə asan qoşulan nazik simsiz klaviatura.", "Qayçı mexanizmli düymələr, Bluetooth", "Səliqəli dizayn, Apple ilə asan qoşulma", "Mac istifadəçiləri, minimal masa"], "gpx": ["Oyun klaviaturası", "E-idman üçün hazırlanmış kompakt mexaniki oyun klaviaturası.", "Mexaniki, rəqəm bloku yoxdur, dəyişdirilən açarlar", "Kompakt ölçü, sürətli reaksiya", "Rəqabətli oyun"], "wtg": ["Oyun klaviaturası", "Sürətli və dəqiq giriş üçün tənzimlənən işə düşmə nöqtəli maqnit açarlar.", "Hall effektli maqnit açarlar", "Tənzimlənən işə düşmə, sürətli təkrar", "E-idman, həvəskarlar"], "mxm": ["Simsiz siçan", "Məhsuldarlıq üçün dəqiq sürüşdürmə təkəri olan erqonomik simsiz siçan.", "Erqonomik forma, çoxcihazlı, sürətli sürüşdürmə", "Uzun saatlarda rahatlıq", "Ofis, yaradıcı iş"], "sl": ["Oyun siçanı", "E-idman üçün hazırlanmış ultra yüngül simsiz siçan.", "Ultra yüngül simsiz, yüksək dəqiqlikli sensor", "Çox aşağı çəki", "Rəqabətli oyun"], "da": ["Oyun siçanı", "Dəqiq sensorlu klassik erqonomik oyun siçanı forması.", "Sağ əl üçün erqonomik forma, optik sensor", "Rahat tutuş, dəqiq izləmə", "Oyun, uzun sessiyalar"], "mm": ["Simsiz siçan", "Çoxtoxunuşlu səthi olan alçaq profilli simsiz siçan.", "Çoxtoxunuşlu səth, Bluetooth", "Səliqəli görünüş, jestlə sürüşdürmə", "Mac istifadəçiləri, yüngül ofis işi"], "mxa": ["Simsiz siçan", "Müxtəlif səthlərdə işləyən kompakt səyahət siçanı.", "Kompakt, çoxcihazlı, dəqiq sensor", "Daşınan və çoxməqsədli", "Səyahət, noutbuk istifadəçiləri"], "sony": ["Qulaqlıq", "Güclü səs-küy ləğvi ilə tanınan qulaqüstü simsiz qulaqlıq.", "Simsiz, aktiv səs-küy ləğvi", "Səs-küy ləğvi, rahatlıq", "Səyahət, diqqət, gündəlik yol"], "app": ["Qulaqlıq", "Səs-küy ləğvi və Apple cihazlarla asan qoşulma olan qulaqiçi qulaqlıq.", "Qulaqiçi, aktiv səs-küy ləğvi", "Kompakt, Apple cihazlarla asan qoşulma", "iPhone və Mac istifadəçiləri, yolda"], "lg": ["Oyun monitoru", "Yüksək yenilənmə tezliyi və sürətli reaksiyası olan oyun monitorları.", "Yüksək yenilənmə tezliyi, sürətli reaksiya", "Oyunlarda rəvan hərəkət", "Oyun, sürətli kontent"], "dul": ["Peşəkar monitor", "Dizayn, montaj və ofis işi üçün rəng dəqiqliyi yüksək monitorlar.", "IPS tipli panel, rəng dəqiqliyi", "Dəqiq rənglər, USB-C seçimləri", "Dizayn, montaj, ofis"]});
+
+4. Sağ yuxarıdakı **"Commit changes..."** düyməsinə basaraq dəyişikliyi yadda saxlayın.
+
+Bunu edən kimi Vercel saytınızı yeniləyəcək və `https://ai-az.site` (və ya Vercel linkiniz) yenidən əvvəlki kimi zəngin dizaynı və funksionallığı ilə işləyəcək!
