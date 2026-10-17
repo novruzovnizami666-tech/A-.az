@@ -57,8 +57,9 @@
             Doğru Texnologiyanı Seçin
         </div>
         
+        <!-- Orijinal Başlıq Bərpa Olundu -->
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight max-w-3xl mx-auto mb-4 leading-tight">
-            500+ Texnoloji Məhsulu <br/><span class="gold-text">Müqayisə Edin</span>
+            Doğru Texnologiyanı <br/><span class="gold-text">Bizimlə Seçin</span>
         </h1>
         
         <!-- Axtarış Zolağı -->
@@ -70,11 +71,11 @@
         <!-- Kateqoriya Düymələri -->
         <div class="flex flex-wrap justify-center gap-3 mt-8">
             <button onclick="filterCategory('all')" class="cat-btn bg-yellow-500 text-black font-bold px-4 py-2 rounded-xl text-sm transition">Hamısı</button>
-            <button onclick="filterCategory('laptops')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">💻 Kompüterlər (100)</button>
-            <button onclick="filterCategory('tablets')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">📱 Planşetlər (100)</button>
-            <button onclick="filterCategory('vr')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🥽 VR Eynəklər (100)</button>
-            <button onclick="filterCategory('headphones')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🎧 Qulaqlıqlar (100)</button>
-            <button onclick="filterCategory('watches')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">⌚ Ağıllı Saatlar (100)</button>
+            <button onclick="filterCategory('laptops')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">💻 Kompüterlər</button>
+            <button onclick="filterCategory('tablets')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">📱 Planşetlər</button>
+            <button onclick="filterCategory('vr')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🥽 VR Eynəklər</button>
+            <button onclick="filterCategory('headphones')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🎧 Qulaqlıqlar</button>
+            <button onclick="filterCategory('watches')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">⌚ Ağıllı Saatlar</button>
         </div>
     </section>
 
@@ -140,11 +141,10 @@
         &copy; 2026 Base.Az. Bütün hüquqlar qorunur.
     </footer>
 
-    <!-- 500 Məhsulluq Avtomatik Generasiya Olunan Veritabanı -->
+    <!-- Məhsul Veritabanı (500 ədəd) -->
     <script>
         const products = [];
         
-        // Kompüterlər (100 ədəd)
         const laptopBrands = ["Apple MacBook Pro", "Apple MacBook Air", "ASUS ROG Zephyrus", "ASUS TUF Gaming", "MSI Raider", "MSI Katana", "Lenovo Legion", "Lenovo ThinkPad", "Acer Predator", "HP Omen"];
         const laptopProcs = ["M3 Max", "M3 Pro", "M2", "Intel Core i9-14900HX", "AMD Ryzen 9 7945HX", "Intel Core i7-14700HX"];
         const laptopGpus = ["RTX 4090 16GB", "RTX 4080 12GB", "RTX 4070 8GB", "RTX 4060 8GB", "Integrated Liquid Retina"];
@@ -160,7 +160,6 @@
             });
         }
 
-        // Planşetlər (100 ədəd)
         const tabletBrands = ["Apple iPad Pro", "Apple iPad Air", "Samsung Galaxy Tab S", "Xiaomi Pad", "Lenovo Tab P", "Huawei MatePad"];
         for(let i = 1; i <= 100; i++) {
             let brand = tabletBrands[i % tabletBrands.length];
@@ -173,7 +172,6 @@
             });
         }
 
-        // VR Eynəklər (100 ədəd)
         const vrBrands = ["Meta Quest", "Apple Vision", "PlayStation VR", "HTC Vive", "Pimax Crystal"];
         for(let i = 1; i <= 100; i++) {
             let brand = vrBrands[i % vrBrands.length];
@@ -186,7 +184,6 @@
             });
         }
 
-        // Qulaqlıqlar (100 ədəd)
         const audioBrands = ["Apple AirPods Max", "Sony WH-1000XM", "Bose QuietComfort", "Sennheiser Momentum", "JBL Tour One"];
         for(let i = 1; i <= 100; i++) {
             let brand = audioBrands[i % audioBrands.length];
@@ -199,7 +196,6 @@
             });
         }
 
-        // Ağıllı Saatlar (100 ədəd)
         const watchBrands = ["Apple Watch Ultra", "Apple Watch Series", "Samsung Galaxy Watch", "Garmin Fenix", "Huawei Watch GT"];
         for(let i = 1; i <= 100; i++) {
             let brand = watchBrands[i % watchBrands.length];
@@ -246,7 +242,6 @@
         }
 
         function filterCategory(cat) {
-            // Düymələrin aktivliyini tənzimlə
             if(cat === 'all') {
                 renderProducts(products);
             } else {
@@ -268,7 +263,6 @@
             document.getElementById(id).classList.remove('active');
         }
 
-        // İlkin olaraq bütün 500 məhsulu göstər
         renderProducts(products);
     </script>
 </body>
