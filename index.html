@@ -25,7 +25,7 @@
 <style>
 @property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
 :root{
-  --photo:url("https://unsplash.com/photos/SF7PHY1v0io/download?force=true&w=1920");
+  --photo:url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1920&q=80");
   --bg:#07070A;--tx:#F5F5F7;--mut:#9A9AA3;--line:rgba(255,255,255,.1);
   --gold:#E2BE80;--gold2:#B98A4A;--f:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 *{box-sizing:border-box}
@@ -141,90 +141,4 @@ footer p{margin:0 0 8px;max-width:62em}
     <p class="lead rv" data-i="s1p">The parts you never see decide everything you feel.</p>
     <div class="feat">
       <div class="glass rv"><h3 data-i="f1h">The display</h3><p data-i="f1p">Brightness, refresh rate and color accuracy shape every hour you spend looking at it.</p></div>
-      <div class="glass rv"><h3 data-i="f2h">The silicon</h3><p data-i="f2p">Processor and graphics decide what runs smoothly, from editing video to rendering games.</p></div>
-      <div class="glass rv"><h3 data-i="f3h">The cooling</h3><p data-i="f3p">Fans and copper heat pipes keep performance steady when the load stays high.</p></div>
-    </div>
-  </section>
-
-  <section id="compare">
-    <h2 class="rv" data-i="ch">Compare.</h2>
-    <p class="lead rv" data-i="cp">Pick a category, select up to three, and see them side by side.</p>
-    <div class="tabs" id="tb" role="group" aria-label="Category"><button type="button" aria-pressed="true" data-k="comp" data-i="tcomp">Computers</button><button type="button" aria-pressed="false" data-k="kb" data-i="tkb">Keyboards</button><button type="button" aria-pressed="false" data-k="ms" data-i="tms">Mice</button><button type="button" aria-pressed="false" data-k="acc" data-i="tacc">Accessories</button></div>
-    <div class="sf" id="sf" role="group"></div>
-    <div class="grid" id="gr"></div>
-    <div class="cmp" id="cm"></div>
-  </section>
-</main>
-
-<footer><div class="wrap">
-  <p><b>Ai.az</b> · <span data-i="fo1">Specifications are general and vary by model, year and configuration. Check the seller's official listing before you buy. Ratings are our overall impression, not lab results.</span></p>
-  <p data-i="fo2">Some "Buy Now" links may be affiliate links. If you purchase through them, we may earn a commission at no extra cost to you.</p>
-  <p>© 2026 Ai.az · ai-az.site</p>
-</div></footer>
-
-<script>
-(function(){
-'use strict';
-var LINKS={};
-var RN=[];
-var P={
-comp:[
-{id:'mbp',n:'MacBook Pro 14"',ty:'Laptop',t:'Pro-grade display and endurance for creators and developers.',s:[['Key tech','Apple silicon (M-series)'],['Strength','Display and battery life'],['Best for','Video, code, design']],r:[5,3,3,5],g:["Laptop"]},
-{id:'mba',n:'MacBook Air',ty:'Laptop',t:'Light, silent and built for all-day use.',s:[['Key tech','Apple silicon (M-series)'],['Strength','Weight and battery life'],['Best for','Students, travel']],r:[4,5,2,5],g:["Laptop"]},
-{id:'xps',n:'Dell XPS',ty:'Laptop',t:'A refined Windows laptop with an edge-to-edge display.',s:[['Key tech','Intel Core Ultra'],['Strength','Premium build and screen'],['Best for','Work, creative']],r:[4,4,3,4],g:["Laptop"]},
-{id:'tpx',n:'ThinkPad X1 Carbon',ty:'Laptop',t:'Ultralight business machine with a great keyboard.',s:[['Key tech','Intel Core Ultra'],['Strength','Light and durable'],['Best for','Business, travel']],r:[4,5,2,4],g:["Laptop"]},
-{id:'rog',n:'ASUS ROG Zephyrus',ty:'Gaming laptop',t:'High-refresh display and a powerful discrete GPU.',s:[['Key tech','Ryzen or Core Ultra + RTX'],['Strength','Display and GPU power'],['Best for','Gaming, creation']],r:[5,2,5,3],g:["Laptop", "Gaming"]},
-{id:'leg',n:'Lenovo Legion',ty:'Gaming laptop',t:'Gaming laptop with a focus on cooling and keyboard feel.',s:[['Key tech','Core or Ryzen + RTX'],['Strength','Cooling design'],['Best for','Competitive gaming']],r:[5,2,5,3],g:["Laptop", "Gaming"]},
-{id:"mini",n:"Mac mini",ty:"Desktop",t:"Compact desktop with Apple silicon, quiet and efficient.",s:S3("Apple silicon (M-series)","Tiny size, low power use","Home office, creative work"),r:[4, 2, 2, 5],g:["Desktop"]},
-{id:"pc",n:"Custom gaming PC",ty:"Desktop",t:"A desktop built around a strong GPU and CPU, easy to upgrade.",s:S3("Ryzen X3D or Core + GeForce RTX","Top gaming power, upgradeable","Gaming, streaming"),r:[5, 1, 5, 3],g:["Desktop", "Gaming"]}],
-kb:[
-{id:"kc",n:"Keychron Q / K series",ty:"Mechanical keyboard",t:"Wireless mechanical keyboards with hot-swappable switches and Mac/Windows layouts.",s:S3("Mechanical, Bluetooth + wired","Customizable switches, solid build","Typing, work, enthusiasts"),r:[5, 3, 3, 4],g:["Mechanical", "Wireless", "Office"]},
-{id:"mx",n:"Logitech MX Keys",ty:"Wireless keyboard",t:"Slim, quiet wireless keyboard that pairs with several devices.",s:S3("Low-profile keys, backlight, multi-device","Comfortable, quiet typing","Office, long work days"),r:[4, 4, 1, 5],g:["Wireless", "Office"]},
-{id:"mk",n:"Apple Magic Keyboard",ty:"Wireless keyboard",t:"Slim wireless keyboard made to pair easily with Mac, iPad and iPhone.",s:S3("Scissor-switch keys, Bluetooth","Clean design, easy Apple pairing","Mac users, minimal desks"),r:[3, 5, 1, 4],g:["Wireless", "Office"]},
-{id:"gpx",n:"Logitech G PRO",ty:"Gaming keyboard",t:"Compact mechanical gaming keyboard built for esports.",s:S3("Mechanical, tenkeyless, swappable switches","Compact size, fast response","Competitive gaming"),r:[4, 4, 5, 2],g:["Mechanical", "Gaming"]},
-{id:"wtg",n:"Wooting 60HE",ty:"Gaming keyboard",t:"Magnetic switches with adjustable actuation for fast, precise input.",s:S3("Hall-effect magnetic switches","Adjustable actuation, rapid trigger","Esports, enthusiasts"),r:[4, 5, 5, 2],g:["Gaming"]}],
-ms:[
-{id:"mxm",n:"Logitech MX Master",ty:"Wireless mouse",t:"Ergonomic wireless mouse with a precise scroll wheel for productivity.",s:S3("Ergonomic shape, multi-device, fast scroll","Comfort for long hours","Office, creative work"),r:[4, 5, 2, 4],g:["Wireless", "Ergonomic", "Office"]},
-{id:"sl",n:"Logitech G PRO X Superlight",ty:"Gaming mouse",t:"Ultralight wireless mouse designed for esports.",s:S3("Ultralight wireless, high-precision sensor","Very low weight","Competitive gaming"),r:[5, 3, 5, 4],g:["Wireless", "Gaming"]},
-{id:"da",n:"Razer DeathAdder",ty:"Gaming mouse",t:"A classic ergonomic gaming mouse shape with a precise sensor.",s:S3("Ergonomic right-hand shape, optical sensor","Comfortable grip, accurate tracking","Gaming, long sessions"),r:[5, 5, 5, 2],g:["Gaming", "Ergonomic"]},
-{id:"mm",n:"Apple Magic Mouse",ty:"Wireless mouse",t:"Low-profile wireless mouse with a multi-touch surface.",s:S3("Multi-touch surface, Bluetooth","Clean look, gesture scrolling","Mac users, light office use"),r:[3, 2, 1, 4],g:["Wireless", "Office"]},
-{id:"mxa",n:"Logitech MX Anywhere",ty:"Wireless mouse",t:"Compact travel mouse that works on many surfaces.",s:S3("Compact, multi-device, precise sensor","Portable and versatile","Travel, laptop users"),r:[4, 3, 2, 4],g:["Wireless", "Office"]}],
-acc:[
-{id:"sony",n:"Sony WH-1000XM",ty:"Headphones",t:"Over-ear wireless headphones known for strong noise cancelling.",s:S3("Wireless, active noise cancelling","Noise cancelling, comfort","Travel, focus, commuting"),r:[5, 3, 2, 5],g:["Headphones"]},
-{id:"app",n:"Apple AirPods Pro",ty:"Headphones",t:"In-ear earbuds with noise cancelling and easy Apple device pairing.",s:S3("In-ear, active noise cancelling","Compact, easy pairing with Apple devices","iPhone and Mac users, on the go"),r:[4, 5, 1, 4],g:["Headphones"]},
-{id:"lg",n:"LG UltraGear",ty:"Gaming monitor",t:"Gaming monitors with high refresh rates and fast response.",s:S3("High refresh rate, fast response panel","Smooth motion in games","Gaming, fast-paced content"),r:[4, 1, 5, 3],g:["Monitors"]},
-{id:"dul",n:"Dell UltraSharp",ty:"Professional monitor",t:"Color-accurate monitors for design, editing and office work.",s:S3("IPS-type panel, color accuracy","Accurate colors, USB-C options","Design, editing, office"),r:[5, 1, 2, 5],g:["Monitors"]},
-{id:"anh",n:"Anker USB-C Hub",ty:"USB hub",t:"Affordable USB-C hubs that add ports to thin laptops.",s:S3("USB-C hub: USB-A, HDMI, card reader (varies)","Added ports at a low price","Students, everyday laptops"),r:[3, 5, 1, 4],g:["Hubs"]},
-{id:"cal",n:"CalDigit TS4",ty:"Thunderbolt dock",t:"A full Thunderbolt dock that turns one cable into a complete desk setup.",s:S3("Thunderbolt 4 dock, many ports","One cable for the whole desk","Pro desks, multi-monitor setups"),r:[5, 2, 2, 5],g:["Hubs"]}]};
-function S3(a,b,c){return [["",a],["",b],["",c]];}
-var L=[['Display',0],['Keyboard',1],['Battery',2],['Mainboard',3],['Cooling',4],['Chassis',5]];
-var $=function(i){return document.getElementById(i)};
-function el(t,c,x){var d=document.createElement(t);if(c)d.className=c;if(x!=null)d.textContent=x;return d;}
-
-var TX={
-en:{n1:'Inside',n2:'Compare',kick:'Precision, layer by layer',h1a:'Inside the',h1b:'machine.',sub:'Every layer, engineered. Then compared, so you buy the right one.',cue:'Scroll to pull it apart',s1h:'Built from the inside out.',s1p:'The parts you never see decide everything you feel.',f1h:'The display',f1p:'Brightness, refresh rate and color accuracy shape every hour you spend looking at it.',f2h:'The silicon',f2p:'Processor and graphics decide what runs smoothly, from editing video to rendering games.',f3h:'The cooling',f3p:'Fans and copper heat pipes keep performance steady when the load stays high.',ch:'Compare.',cp:'Pick a category, select up to three, and see them side by side.',tlap:'Laptops',tgam:'Gaming',hint:'Select at least two products to compare them side by side.',cmp:'Compare',sel:'✓ Selected',buy:'Buy Now',buyAria:'Buy %s (opens in a new tab)',kt:'Key tech',st:'Strength',bf:'Best for',r1:'Performance',r2:'Portability',r3:'Gaming',r4:'Efficiency',l_Display:'Display',l_Keyboard:'Keyboard',l_Battery:'Battery',l_Mainboard:'Mainboard',l_Cooling:'Cooling',l_Chassis:'Chassis',lgA:'Components',tbA:'Category',lang:'Language',title:'Ai.az – Computers, keyboards, mice and accessories, compared',desc:'Compare computers, keyboards, mice, headphones, monitors and hubs on Ai.az.',fo1:"Specifications are general and vary by model, year and configuration. Check the seller's official listing before you buy. Ratings are our overall impression, not lab results.",fo2:'Some "Buy Now" links may be affiliate links. If you purchase through them, we may earn a commission at no extra cost to you.'},
-az:{n1:'İçəridə',n2:'Müqayisə',kick:'Dəqiqlik, qat-qat',h1a:'Maşının',h1b:'içində.',sub:'Hər qat dəqiqliklə hazırlanıb. Sonra müqayisə edirik ki, doğrusunu alasan.',cue:'Ayırmaq üçün aşağı sürüşdür',s1h:'Daxildən xaricə qurulub.',s1p:'Görmədiyin hissələr hiss etdiyin hər şeyi müəyyən edir.',f1h:'Ekran',f1p:'Parlaqlıq, yenilənmə tezliyi və rəng dəqiqliyi ona baxdığın hər saatı formalaşdırır.',f2h:'Prosessor',f2p:'Prosessor və qrafika videonun montajından oyunların işlənməsinə qədər nəyin rəvan işləyəcəyini müəyyən edir.',f3h:'Soyutma',f3p:'Soyuducular və mis istilik boruları yük yüksək qalanda performansı sabit saxlayır.',ch:'Müqayisə et.',cp:'Kateqoriya seç, üç məhsula qədər işarələ və yan-yana gör.',tlap:'Noutbuklar',tgam:'Oyun',hint:'Yan-yana müqayisə üçün ən azı iki məhsul seç.',cmp:'Müqayisə et',sel:'✓ Seçildi',buy:'İndi al',buyAria:'%s al (yeni tabda açılır)',kt:'Əsas texnologiya',st:'Üstünlük',bf:'Kimlər üçün',r1:'Performans',r2:'Portativlik',r3:'Oyun',r4:'Səmərəlilik',l_Display:'Ekran',l_Keyboard:'Klaviatura',l_Battery:'Batareya',l_Mainboard:'Ana plata',l_Cooling:'Soyutma',l_Chassis:'Korpus',lgA:'Komponentlər',tbA:'Kateqoriya',lang:'Dil',title:'Ai.az – Noutbuklar və oyun avadanlığı müqayisəsi',desc:'Maşının içində. Premium noutbukları və oyun avadanlığını Ai.az-da müqayisə et.',fo1:'Xüsusiyyətlər ümumidir və modelə, buraxılış ilinə və konfiqurasiyaya görə dəyişir. Almazdan əvvəl satıcının rəsmi elanını yoxla. Qiymətləndirmələr bizim ümumi təəssüratımızdır, laboratoriya nəticəsi deyil.',fo2:'Bəzi "İndi al" linkləri partnyor (affiliate) linkləri ola bilər. Bu linklərlə alış etsən, sənə əlavə xərc olmadan komissiya qazana bilərik.'},
-tr:{n1:'İçinde',n2:'Karşılaştır',kick:'Hassasiyet, katman katman',h1a:'Makinenin',h1b:'içinde.',sub:'Her katman özenle tasarlandı. Sonra karşılaştırıyoruz, böylece doğru olanı alırsın.',cue:'Parçalamak için aşağı kaydır',s1h:'İçten dışa inşa edildi.',s1p:'Görmediğin parçalar hissettiğin her şeyi belirler.',f1h:'Ekran',f1p:'Parlaklık, yenileme hızı ve renk doğruluğu ona baktığın her saati şekillendirir.',f2h:'İşlemci',f2p:'İşlemci ve grafik, video düzenlemeden oyun oynamaya kadar neyin akıcı çalışacağını belirler.',f3h:'Soğutma',f3p:'Fanlar ve bakır ısı boruları yük yüksek kaldığında performansı sabit tutar.',ch:'Karşılaştır.',cp:'Bir kategori seç, en fazla üç ürün işaretle ve yan yana gör.',tlap:'Dizüstü',tgam:'Oyun',hint:'Yan yana karşılaştırmak için en az iki ürün seç.',cmp:'Karşılaştır',sel:'✓ Seçildi',buy:'Şimdi al',buyAria:'%s satın al (yeni sekmede açılır)',kt:'Ana teknoloji',st:'Güçlü yön',bf:'Kimler için',r1:'Performans',r2:'Taşınabilirlik',r3:'Oyun',r4:'Verimlilik',l_Display:'Ekran',l_Keyboard:'Klavye',l_Battery:'Batarya',l_Mainboard:'Anakart',l_Cooling:'Soğutma',l_Chassis:'Kasa',lgA:'Bileşenler',tbA:'Kategori',lang:'Dil',title:'Ai.az – Dizüstü bilgisayarlar ve oyun donanımı karşılaştırması',desc:"Makinenin içinde. Premium dizüstü bilgisayarları ve oyun donanımını Ai.az'da karşılaştır.",fo1:'Özellikler geneldir ve modele, yıla ve yapılandırmaya göre değişir. Satın almadan önce satıcının resmi ilanını kontrol et. Puanlar genel izlenimimizdir, laboratuvar sonucu değildir.',fo2:'Bazı "Şimdi al" bağlantıları ortaklık (affiliate) bağlantısı olabilir. Bu bağlantılarla satın alırsan, sana ek maliyet olmadan komisyon kazanabiliriz.'}};
-
-var PX={
-az:{mbp:['Noutbuk','Yaradıcılar və proqramçılar üçün peşəkar ekran və dözümlülük.','Apple silicon (M seriyası)','Ekran və batareya ömrü','Video, kod, dizayn'],
-mba:['Noutbuk','Yüngül, səssiz və bütün gün istifadə üçün hazırlanıb.','Apple silicon (M seriyası)','Çəki və batareya ömrü','Tələbələr, səyahət'],
-xps:['Noutbuk','Kənardan kənara ekranlı zərif Windows noutbuku.','Intel Core Ultra','Premium keyfiyyət və ekran','İş, yaradıcılıq'],
-tpx:['Noutbuk','Əla klaviaturalı ultra yüngül biznes noutbuku.','Intel Core Ultra','Yüngül və davamlı','Biznes, səyahət'],
-rog:['Oyun noutbuku','Yüksək yenilənmə tezlikli ekran və güclü ayrıca videokart.','Ryzen və ya Core Ultra + RTX','Ekran və videokart gücü','Oyun, yaradıcılıq'],
-leg:['Oyun noutbuku','Soyutmaya və klaviatura hissinə diqqət yetirən oyun noutbuku.','Core və ya Ryzen + RTX','Soyutma dizaynı','Rəqabətli oyun'],
-rtx:['Videokart','Yüksək keyfiyyətli oyunlar üçün şüa izləmə və DLSS böyütmə.','RTX seriyalı GPU','Şüa izləmə, DLSS','Oyun kompüterləri'],
-x3d:['Prosessor','Oyunlarda kadr sürətini artıran böyük yığılmış keş yaddaş.','Zen nüvələri + 3D V-Cache','Oyun performansı','Oyun masaüstü kompüterləri']},
-tr:{mbp:['Dizüstü','İçerik üreticiler ve geliştiriciler için profesyonel ekran ve dayanıklılık.','Apple silicon (M serisi)','Ekran ve pil ömrü','Video, kod, tasarım'],
-mba:['Dizüstü','Hafif, sessiz ve gün boyu kullanım için tasarlandı.','Apple silicon (M serisi)','Ağırlık ve pil ömrü','Öğrenciler, seyahat'],
-xps:['Dizüstü','Kenardan kenara ekranlı zarif bir Windows dizüstü.','Intel Core Ultra','Premium yapı ve ekran','İş, yaratıcılık'],
-tpx:['Dizüstü','Harika klavyeli ultra hafif iş dizüstüsü.','Intel Core Ultra','Hafif ve dayanıklı','İş, seyahat'],
-rog:['Oyun dizüstüsü','Yüksek yenileme hızlı ekran ve güçlü ayrık ekran kartı.','Ryzen veya Core Ultra + RTX','Ekran ve ekran kartı gücü','Oyun, içerik üretimi'],
-leg:['Oyun dizüstüsü','Soğutmaya ve klavye hissine odaklanan oyun dizüstüsü.','Core veya Ryzen + RTX','Soğutma tasarımı','Rekabetçi oyun'],
-rtx:['Ekran kartı','Yüksek kaliteli oyunlar için ışın izleme ve DLSS ölçekleme.','RTX serisi GPU','Işın izleme, DLSS','Oyun bilgisayarları'],
-x3d:['İşlemci','Oyunlarda kare hızını artıran büyük yığılmış önbellek.','Zen çekirdekleri + 3D V-Cache','Oyun performansı','Oyun masaüstü bilgisayarları']}};
-Object.assign(PX.az,{"mini": ["Masaüstü", "Apple silicon ilə kiçik, səssiz və qənaətcil masaüstü kompüter.", "Apple silicon (M seriyası)", "Kiçik ölçü, az enerji sərfi", "Ev ofisi, yaradıcı iş"], "pc": ["Masaüstü", "Güclü videokart və prosessor ətrafında qurulmuş, yenilənməsi asan masaüstü.", "Ryzen X3D və ya Core + GeForce RTX", "Ən yüksək oyun gücü, yenilənə bilər", "Oyun, yayım (stream)"], "kc": ["Mexaniki klaviatura", "Dəyişdirilə bilən açarlı və Mac/Windows düzümlü simsiz mexaniki klaviaturalar.", "Mexaniki, Bluetooth + simli", "Fərdiləşdirilən açarlar, möhkəm quruluş", "Yazı, iş, həvəskarlar"], "mx": ["Simsiz klaviatura", "Bir neçə cihazla qoşulan nazik və səssiz simsiz klaviatura.", "Alçaq düymələr, işıqlandırma, çoxcihazlı", "Rahat və səssiz yazı", "Ofis, uzun iş günləri"], "mk": ["Simsiz klaviatura", "Mac, iPad və iPhone ilə asan qoşulan nazik simsiz klaviatura.", "Qayçı mexanizmli düymələr, Bluetooth", "Səliqəli dizayn, Apple ilə asan qoşulma", "Mac istifadəçiləri, minimal masa"], "gpx": ["Oyun klaviaturası", "E-idman üçün hazırlanmış kompakt mexaniki oyun klaviaturası.", "Mexaniki, rəqəm bloku yoxdur, dəyişdirilən açarlar", "Kompakt ölçü, sürətli reaksiya", "Rəqabətli oyun"], "wtg": ["Oyun klaviaturası", "Sürətli və dəqiq giriş üçün tənzimlənən işə düşmə nöqtəli maqnit açarlar.", "Hall effektli maqnit açarlar", "Tənzimlənən işə düşmə, sürətli təkrar", "E-idman, həvəskarlar"], "mxm": ["Simsiz siçan", "Məhsuldarlıq üçün dəqiq sürüşdürmə təkəri olan erqonomik simsiz siçan.", "Erqonomik forma, çoxcihazlı, sürətli sürüşdürmə", "Uzun saatlarda rahatlıq", "Ofis, yaradıcı iş"], "sl": ["Oyun siçanı", "E-idman üçün hazırlanmış ultra yüngül simsiz siçan.", "Ultra yüngül simsiz, yüksək dəqiqlikli sensor", "Çox aşağı çəki", "Rəqabətli oyun"], "da": ["Oyun siçanı", "Dəqiq sensorlu klassik erqonomik oyun siçanı forması.", "Sağ əl üçün erqonomik forma, optik sensor", "Rahat tutuş, dəqiq izləmə", "Oyun, uzun sessiyalar"], "mm": ["Simsiz siçan", "Çoxtoxunuşlu səthi olan alçaq profilli simsiz siçan.", "Çoxtoxunuşlu səth, Bluetooth", "Səliqəli görünüş, jestlə sürüşdürmə", "Mac istifadəçiləri, yüngül ofis işi"], "mxa": ["Simsiz siçan", "Müxtəlif səthlərdə işləyən kompakt səyahət siçanı.", "Kompakt, çoxcihazlı, dəqiq sensor", "Daşınan və çoxməqsədli", "Səyahət, noutbuk istifadəçiləri"], "sony": ["Qulaqlıq", "Güclü səs-küy ləğvi ilə tanınan qulaqüstü simsiz qulaqlıq.", "Simsiz, aktiv səs-küy ləğvi", "Səs-küy ləğvi, rahatlıq", "Səyahət, diqqət, gündəlik yol"], "app": ["Qulaqlıq", "Səs-küy ləğvi və Apple cihazlarla asan qoşulma olan qulaqiçi qulaqlıq.", "Qulaqiçi, aktiv səs-küy ləğvi", "Kompakt, Apple cihazlarla asan qoşulma", "iPhone və Mac istifadəçiləri, yolda"], "lg": ["Oyun monitoru", "Yüksək yenilənmə tezliyi və sürətli reaksiyası olan oyun monitorları.", "Yüksək yenilənmə tezliyi, sürətli reaksiya", "Oyunlarda rəvan hərəkət", "Oyun, sürətli kontent"], "dul": ["Peşəkar monitor", "Dizayn, montaj və ofis işi üçün rəng dəqiqliyi yüksək monitorlar.", "IPS tipli panel, rəng dəqiqliyi", "Dəqiq rənglər, USB-C seçimləri", "Dizayn, montaj, ofis"]});
-
-4. Sağ yuxarıdakı **"Commit changes..."** düyməsinə basaraq dəyişikliyi yadda saxlayın.
-
-Bunu edən kimi Vercel saytınızı yeniləyəcək və `https://ai-az.site` (və ya Vercel linkiniz) yenidən əvvəlki kimi zəngin dizaynı və funksionallığı ilə işləyəcək!
+      <div class="glass rv"><h3 data-i="f2h">The silicon</h3><p data
