@@ -10,6 +10,12 @@
         .neon-glow {
             text-shadow: 0 0 15px rgba(234, 179, 8, 0.6);
         }
+        .modal {
+            display: none;
+        }
+        .modal.active {
+            display: flex;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100 font-sans min-h-screen flex flex-col justify-between">
@@ -20,59 +26,115 @@
             <div class="flex items-center space-x-2">
                 <span class="text-2xl font-black tracking-wider text-white">Base<span class="text-yellow-400">.Az</span></span>
             </div>
-            <!-- Naviqasiya Linkləri -->
-            <nav class="hidden md:flex space-x-6 text-sm font-medium text-zinc-300">
-                <a href="#" class="hover:text-yellow-400 transition">Kompüterlər</a>
-                <a href="#" class="hover:text-yellow-400 transition">Planşetlər</a>
-                <a href="#" class="hover:text-yellow-400 transition">VR Eynəklər</a>
-                <a href="#" class="hover:text-yellow-400 transition">Qulaqlıqlar</a>
-                <a href="#" class="hover:text-yellow-400 transition">Saatlar</a>
+            
+            <!-- Naviqasiya Linkləri (Bütün Kateqoriyalar daxil) -->
+            <nav class="hidden lg:flex space-x-6 text-sm font-medium text-zinc-300">
+                <a href="#computers" class="hover:text-yellow-400 transition">Kompüterlər</a>
+                <a href="#tablets" class="hover:text-yellow-400 transition">Planşetlər</a>
+                <a href="#vr" class="hover:text-yellow-400 transition">VR Gözlüklər</a>
+                <a href="#headphones" class="hover:text-yellow-400 transition">Qulaqlıqlar</a>
+                <a href="#watches" class="hover:text-yellow-400 transition">Ağıllı Saatlar</a>
             </nav>
-            <!-- Giriş / Qeydiyyat Düymələri -->
+
+            <!-- Log In & Sign Up Free Düymələri -->
             <div class="flex items-center space-x-3">
-                <button onclick="alert('Daxil ol səhifəsi açılır...')" class="text-sm font-medium text-zinc-300 hover:text-white px-3 py-2 transition">Daxil ol</button>
-                <button onclick="alert('Qeydiyyat səhifəsi açılır...')" class="bg-yellow-500 hover:bg-yellow-400 text-zinc-950 font-bold px-4 py-2 rounded-lg text-sm transition shadow-lg shadow-yellow-500/20">Qeydiyyatdan keç</button>
+                <button onclick="openModal('loginModal')" class="text-sm font-medium text-zinc-300 hover:text-white px-3 py-2 transition">Log In</button>
+                <button onclick="openModal('signupModal')" class="bg-yellow-500 hover:bg-yellow-400 text-zinc-950 font-bold px-4 py-2 rounded-lg text-sm transition shadow-lg shadow-yellow-500/20">Sign Up Free</button>
             </div>
         </div>
     </header>
 
-    <!-- Hero / Əsas Bölmə -->
-    <main class="max-w-7xl mx-auto px-4 py-16 flex-grow flex flex-col items-center text-center">
+    <!-- Əsas Bölmə -->
+    <main class="max-w-7xl mx-auto px-4 py-12 flex-grow flex flex-col items-center text-center">
         <div class="inline-block bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-semibold px-3 py-1 rounded-full mb-6">
-            🚀 Azərbaycanın Ən Müasir Texnologiya Müqayisə Platforması
+            🚀 Texnologiya Müqayisə Platforması
         </div>
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-3xl mb-6">
-            Doğru Texnologiyanı <span class="text-yellow-400 neon-glow">Bizimlə Seçin</span>
+            Doğru Texnologiyanı <span class="text-yellow-400 neon-glow">Seçin</span>
         </h1>
         <p class="text-zinc-400 max-w-xl text-base md:text-lg mb-10">
-            Noutbuklar, planşetlər, ağıllı saatlar, qulaqlıqlar və VR eynəkləri bir yerdө müqayisə edin, ən sərfəli seçimi tapın.
+            Kompüterlər, planşetlər, VR gözlüklər, qulaqlıqlar və saatları bir yerdə müqayisə edin.
         </p>
 
-        <!-- Kateqoriya Kartları Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-4xl mt-6">
-            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-yellow-500/50 transition cursor-pointer text-center group">
+        <!-- Kateqoriyalar Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 w-full max-w-5xl mt-4">
+            <div class="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl hover:border-yellow-500/50 transition cursor-pointer text-center group">
+                <div class="text-3xl mb-2">💻</div>
+                <h3 class="font-bold group-hover:text-yellow-400 transition text-sm">Kompüterlər</h3>
+            </div>
+            <div class="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl hover:border-yellow-500/50 transition cursor-pointer text-center group">
                 <div class="text-3xl mb-2">📱</div>
-                <h3 class="font-bold group-hover:text-yellow-400 transition">Planşetlər</h3>
+                <h3 class="font-bold group-hover:text-yellow-400 transition text-sm">Planşetlər</h3>
             </div>
-            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-yellow-500/50 transition cursor-pointer text-center group">
+            <div class="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl hover:border-yellow-500/50 transition cursor-pointer text-center group">
                 <div class="text-3xl mb-2">🥽</div>
-                <h3 class="font-bold group-hover:text-yellow-400 transition">VR Eynəklər</h3>
+                <h3 class="font-bold group-hover:text-yellow-400 transition text-sm">VR Gözlüklər</h3>
             </div>
-            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-yellow-500/50 transition cursor-pointer text-center group">
+            <div class="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl hover:border-yellow-500/50 transition cursor-pointer text-center group">
                 <div class="text-3xl mb-2">🎧</div>
-                <h3 class="font-bold group-hover:text-yellow-400 transition">Qulaqlıqlar</h3>
+                <h3 class="font-bold group-hover:text-yellow-400 transition text-sm">Qulaqlıqlar</h3>
             </div>
-            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl hover:border-yellow-500/50 transition cursor-pointer text-center group">
+            <div class="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl hover:border-yellow-500/50 transition cursor-pointer text-center group">
                 <div class="text-3xl mb-2">⌚</div>
-                <h3 class="font-bold group-hover:text-yellow-400 transition">Saatlar</h3>
+                <h3 class="font-bold group-hover:text-yellow-400 transition text-sm">Ağıllı Saatlar</h3>
             </div>
         </div>
     </main>
+
+    <!-- Log In Modal -->
+    <div id="loginModal" class="modal fixed inset-0 bg-black/70 backdrop-blur-sm items-center justify-center p-4 z-50">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 w-full max-w-md relative shadow-2xl">
+            <button onclick="closeModal('loginModal')" class="absolute top-4 right-4 text-zinc-400 hover:text-white">&times;</button>
+            <h2 class="text-2xl font-bold mb-4 text-center">Hesaba Giriş (Log In)</h2>
+            <form class="space-y-4" onsubmit="event.preventDefault(); closeModal('loginModal');">
+                <div>
+                    <label class="block text-xs font-medium text-zinc-400 mb-1">E-poçt</label>
+                    <input type="email" placeholder="nümunə@domain.com" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-2.5 text-sm focus:border-yellow-500 outline-none" required>
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-zinc-400 mb-1">Şifrə</label>
+                    <input type="password" placeholder="••••••••" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-2.5 text-sm focus:border-yellow-500 outline-none" required>
+                </div>
+                <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-zinc-950 font-bold py-2.5 rounded-lg text-sm transition">Daxil ol</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal fixed inset-0 bg-black/70 backdrop-blur-sm items-center justify-center p-4 z-50">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 w-full max-w-md relative shadow-2xl">
+            <button onclick="closeModal('signupModal')" class="absolute top-4 right-4 text-zinc-400 hover:text-white">&times;</button>
+            <h2 class="text-2xl font-bold mb-4 text-center">Qeydiyyat (Sign Up Free)</h2>
+            <form class="space-y-4" onsubmit="event.preventDefault(); closeModal('signupModal');">
+                <div>
+                    <label class="block text-xs font-medium text-zinc-400 mb-1">Ad Soyad</label>
+                    <input type="text" placeholder="İstifadəçi Adı" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-2.5 text-sm focus:border-yellow-500 outline-none" required>
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-zinc-400 mb-1">E-poçt</label>
+                    <input type="email" placeholder="nümunə@domain.com" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-2.5 text-sm focus:border-yellow-500 outline-none" required>
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-zinc-400 mb-1">Şifrə</label>
+                    <input type="password" placeholder="••••••••" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg p-2.5 text-sm focus:border-yellow-500 outline-none" required>
+                </div>
+                <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-zinc-950 font-bold py-2.5 rounded-lg text-sm transition">Pulsuz Qeydiyyatdan Keç</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="border-t border-zinc-800 py-6 text-center text-xs text-zinc-500">
         &copy; 2026 Base.Az. Bütün hüquqlar qorunur.
     </footer>
 
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+        }
+    </script>
 </body>
 </html>
