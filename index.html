@@ -37,7 +37,7 @@
             <nav class="hidden lg:flex space-x-6 text-sm font-medium text-zinc-300">
                 <button onclick="filterCategory('laptops')" class="hover:text-yellow-400 transition">Kompüterlər</button>
                 <button onclick="filterCategory('tablets')" class="hover:text-yellow-400 transition">Planşetlər</button>
-                <button onclick="filterCategory('vr')" class="hover:text-yellow-400 transition">VR Gözlüklər</button>
+                <button onclick="filterCategory('vr')" class="hover:text-yellow-400 transition">VR Eynəklər</button>
                 <button onclick="filterCategory('headphones')" class="hover:text-yellow-400 transition">Qulaqlıqlar</button>
                 <button onclick="filterCategory('watches')" class="hover:text-yellow-400 transition">Ağıllı Saatlar</button>
             </nav>
@@ -63,7 +63,7 @@
         
         <!-- Axtarış Zolağı -->
         <div class="max-w-xl mx-auto mt-6 relative">
-            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Axtarış edin (məs: MacBook, iPad Pro, AirPods...)" class="w-full bg-zinc-900 border border-zinc-800 rounded-2xl py-3.5 pl-12 pr-4 text-sm focus:border-yellow-500 outline-none text-white transition shadow-xl">
+            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Axtarış edin (məs: MacBook, iPad, Quest 3...)" class="w-full bg-zinc-900 border border-zinc-800 rounded-2xl py-3.5 pl-12 pr-4 text-sm focus:border-yellow-500 outline-none text-white transition shadow-xl">
             <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-zinc-500"></i>
         </div>
 
@@ -72,7 +72,7 @@
             <button onclick="filterCategory('all')" class="cat-btn bg-yellow-500 text-black font-bold px-4 py-2 rounded-xl text-sm transition">Hamısı</button>
             <button onclick="filterCategory('laptops')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">💻 Kompüterlər</button>
             <button onclick="filterCategory('tablets')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">📱 Planşetlər</button>
-            <button onclick="filterCategory('vr')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🥽 VR Gözlüklər</button>
+            <button onclick="filterCategory('vr')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🥽 VR Eynəklər</button>
             <button onclick="filterCategory('headphones')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🎧 Qulaqlıqlar</button>
             <button onclick="filterCategory('watches')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">⌚ Ağıllı Saatlar</button>
         </div>
@@ -137,19 +137,39 @@
         &copy; 2026 Base.Az. Bütün hüquqlar qorunur.
     </footer>
 
-    <!-- Dinamik Skriptlər -->
+    <!-- Genişləndirilmiş Məhsul Bazası -->
     <script>
         const products = [
-            { name: "Apple MacBook Pro 16 M3", cat: "laptops", icon: "laptop", specs: ["16GB RAM", "512GB SSD", "M3 Max Chip"], price: "4,200 AZN" },
-            { name: "ASUS ROG Zephyrus G16", cat: "laptops", icon: "laptop", specs: ["32GB RAM", "1TB SSD", "RTX 4080"], price: "3,800 AZN" },
-            { name: "Apple iPad Pro 12.9 M2", cat: "tablets", icon: "tablet-screen-button", specs: ["8GB RAM", "256GB Storage", "Liquid Retina XDR"], price: "2,300 AZN" },
-            { name: "Samsung Galaxy Tab S9 Ultra", cat: "tablets", icon: "tablet-screen-button", specs: ["12GB RAM", "512GB Storage", "AMOLED 120Hz"], price: "2,100 AZN" },
-            { name: "Meta Quest 3", cat: "vr", icon: "vr-cardboard", specs: ["4K+ Display", "128GB Storage", "Touch Plus Controllers"], price: "1,150 AZN" },
-            { name: "Apple Vision Pro", cat: "vr", icon: "vr-cardboard", specs: ["Dual micro-OLED", "256GB Storage", "M2 + R1 Chips"], price: "7,500 AZN" },
-            { name: "Apple AirPods Max", cat: "headphones", icon: "headphones", specs: ["Active Noise Cancelling", "20 Saat Batareya", "Spatial Audio"], price: "1,100 AZN" },
-            { name: "Sony WH-1000XM5", cat: "headphones", icon: "headphones", specs: ["Ən Yaxşı ANC", "30 Saat Batareya", "Hi-Res Audio"], price: "750 AZN" },
-            { name: "Apple Watch Ultra 2", cat: "watches", icon: "stopwatch", specs: ["Titanium Case", "GPS + Cellular", "36 Saat Batareya"], price: "1,650 AZN" },
-            { name: "Samsung Galaxy Watch 6 Classic", cat: "watches", icon: "stopwatch", specs: ["Rotating Bezel", "BioActive Sensor", "47mm Screen"], price: "680 AZN" }
+            // Kompüterlər
+            { name: "Apple MacBook Pro 16 M3 Max", cat: "laptops", icon: "laptop", specs: ["36GB RAM", "1TB SSD", "Liquid Retina XDR"], price: "5,400 AZN" },
+            { name: "Apple MacBook Air 15 M3", cat: "laptops", icon: "laptop", specs: ["16GB RAM", "512GB SSD", "18 Saat Batareya"], price: "2,850 AZN" },
+            { name: "ASUS ROG Zephyrus G16", cat: "laptops", icon: "laptop", specs: ["32GB RAM", "1TB SSD", "RTX 4080 12GB"], price: "4,600 AZN" },
+            { name: "MSI Raider GE78 HX", cat: "laptops", icon: "laptop", specs: ["64GB RAM", "2TB SSD", "RTX 4090 16GB"], price: "6,900 AZN" },
+            { name: "Lenovo Legion Pro 7i", cat: "laptops", icon: "laptop", specs: ["32GB RAM", "1TB SSD", "RTX 4070"], price: "3,900 AZN" },
+            
+            // Planşetlər
+            { name: "Apple iPad Pro 13 M4 (2024)", cat: "tablets", icon: "tablet-screen-button", specs: ["16GB RAM", "1TB Storage", "Ultra Retina Tandem OLED"], price: "3,500 AZN" },
+            { name: "Apple iPad Air 13 (M2)", cat: "tablets", icon: "tablet-screen-button", specs: ["8GB RAM", "256GB Storage", "Liquid Retina Display"], price: "2,150 AZN" },
+            { name: "Samsung Galaxy Tab S9 Ultra", cat: "tablets", icon: "tablet-screen-button", specs: ["12GB RAM", "512GB Storage", "Dynamic AMOLED 2X 120Hz"], price: "2,400 AZN" },
+            { name: "Xiaomi Pad 6 Pro", cat: "tablets", icon: "tablet-screen-button", specs: ["8GB RAM", "256GB Storage", "Snapdragon 8+ Gen 1"], price: "950 AZN" },
+
+            // VR Eynəklər
+            { name: "Meta Quest 3", cat: "vr", icon: "vr-cardboard", specs: ["4K+ Infinite Display", "128GB Storage", "Snapdragon XR2 Gen 2"], price: "1,150 AZN" },
+            { name: "Apple Vision Pro", cat: "vr", icon: "vr-cardboard", specs: ["Dual micro-OLED", "256GB Storage", "M2 + R1 Custom Chips"], price: "7,500 AZN" },
+            { name: "PlayStation VR2", cat: "vr", icon: "vr-cardboard", specs: ["OLED 2000x2040 per eye", "Haptic Feedback", "Tempest 3D Audio"], price: "1,300 AZN" },
+            { name: "Meta Quest Pro", cat: "vr", icon: "vr-cardboard", specs: ["Local Dimming Backlight", "Eye & Face Tracking", "256GB Storage"], price: "2,200 AZN" },
+
+            // Qulaqlıqlar
+            { name: "Apple AirPods Max", cat: "headphones", icon: "headphones", specs: ["Active Noise Cancelling", "Spatial Audio", "20 Saat Batareya"], price: "1,250 AZN" },
+            { name: "Sony WH-1000XM5", cat: "headphones", icon: "headphones", specs: ["Industry-Leading ANC", "30 Saat Batareya", "Hi-Res Audio Wireless"], price: "780 AZN" },
+            { name: "Bose QuietComfort Ultra", cat: "headphones", icon: "headphones", specs: ["CustomTune Technology", "Immersive Audio", "24 Saat Batareya"], price: "890 AZN" },
+            { name: "Apple AirPods Pro 2 (USB-C)", cat: "headphones", icon: "headphones", specs: ["Adaptive Audio", "Transparency Mode", "MagSafe Case"], price: "580 AZN" },
+
+            // Ağıllı Saatlar
+            { name: "Apple Watch Ultra 2", cat: "watches", icon: "stopwatch", specs: ["Titanium Case 49mm", "Dual-Frequency GPS", "3000 nits Brightness"], price: "1,750 AZN" },
+            { name: "Apple Watch Series 9", cat: "watches", icon: "stopwatch", specs: ["S9 SiP Double Tap", "Always-On Retina", "Edge-to-Edge Display"], price: "980 AZN" },
+            { name: "Samsung Galaxy Watch 6 Classic", cat: "watches", icon: "stopwatch", specs: ["Physical Rotating Bezel", "BioActive Sensor Suite", "Sapphire Crystal"], price: "720 AZN" },
+            { name: "Garmin Fenix 7 Pro Sapphire", cat: "watches", icon: "stopwatch", specs: ["Solar Charging Glass", "Multi-band GPS", "22 Days Battery Life"], price: "2,100 AZN" }
         ];
 
         function renderProducts(items) {
