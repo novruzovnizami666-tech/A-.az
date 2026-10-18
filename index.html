@@ -45,7 +45,7 @@
             <!-- Auth Buttons -->
             <div class="flex items-center space-x-3">
                 <button onclick="openModal('loginModal')" class="text-sm font-medium text-zinc-300 hover:text-white px-4 py-2 transition">Daxil ol</button>
-                <button onclick="openModal('signupModal')" class="gold-gradient text-black font-bold px-5 py-2 rounded-xl text-sm transition transform hover:scale-105 shadow-lg shadow-yellow-500/20">Sign Up Free</button>
+                <button onclick="openModal('signupModal')" class="gold-gradient text-black font-bold px-5 py-2 rounded-xl text-sm transition transform hover:scale-105 shadow-lg shadow-yellow-500/20">Qeydiyyatdan keç</button>
             </div>
         </div>
     </header>
@@ -63,7 +63,7 @@
         
         <!-- Axtarış Zolağı -->
         <div class="max-w-xl mx-auto mt-6 relative">
-            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="İstədiyiniz markanı axtarın (MacBook, iPad, Quest, AirPods, Watch...)" class="w-full bg-zinc-900 border border-zinc-800 rounded-2xl py-3.5 pl-12 pr-4 text-sm focus:border-yellow-500 outline-none text-white transition shadow-xl">
+            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Axtarış edin (MacBook, iPad, Quest, AirPods, Watch...)" class="w-full bg-zinc-900 border border-zinc-800 rounded-2xl py-3.5 pl-12 pr-4 text-sm focus:border-yellow-500 outline-none text-white transition shadow-xl">
             <i class="fa-solid fa-magnifying-glass absolute left-4 top-4 text-zinc-500"></i>
         </div>
 
@@ -89,7 +89,7 @@
         </h2>
         
         <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- JavaScript dinamik olaraq kartları bura dolduracaq -->
+            <!-- Dinamik məhsullar -->
         </div>
     </main>
 
@@ -116,7 +116,7 @@
     <div id="signupModal" class="modal fixed inset-0 bg-black/80 backdrop-blur-sm items-center justify-center p-4 z-50">
         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 w-full max-w-md relative shadow-2xl">
             <button onclick="closeModal('signupModal')" class="absolute top-4 right-4 text-zinc-400 hover:text-white text-xl">&times;</button>
-            <h2 class="text-2xl font-bold mb-4 text-center">Pulsuz Qeydiyyat</h2>
+            <h2 class="text-2xl font-bold mb-4 text-center">Qeydiyyatdan Keç</h2>
             <form class="space-y-4" onsubmit="event.preventDefault(); alert('Qeydiyyat uğurla tamamlandı!'); closeModal('signupModal');">
                 <div>
                     <label class="block text-xs font-medium text-zinc-400 mb-1">Ad Soyad</label>
@@ -140,7 +140,7 @@
         &copy; 2026 Base.Az. Bütün hüquqlar qorunur.
     </footer>
 
-    <!-- 500 Məhsulluq Avtomatik Baza (Hər kateqoriya 100 ədəd) -->
+    <!-- Məhsul Bazası (500 ədəd) -->
     <script>
         const products = [];
         
@@ -218,7 +218,6 @@
                 return;
             }
 
-            // Sürətli açılması üçün ilk 30 məhsul göstərilir
             const displayItems = items.slice(0, 30);
 
             displayItems.forEach(p => {
@@ -300,4 +299,5 @@
         renderProducts(products);
     </script>
 </body>
-</html>
+                    </html>
+    
