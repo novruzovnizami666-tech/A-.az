@@ -21,10 +21,12 @@
         .modal.active {
             display: flex;
         }
+        /* Seçilmiş kateqoriya üçün ağ rəngli xüsusi aktiv stil */
         .cat-btn.active-cat {
-            background-color: #eab308 !important;
+            background-color: #ffffff !important;
             color: #000000 !important;
             font-weight: bold;
+            border-color: #ffffff !important;
         }
     </style>
 </head>
@@ -90,7 +92,7 @@
                 <i class="fa-solid fa-layer-group text-yellow-400"></i>
                 <span>Bütün Məhsullar Kataloqu</span>
             </h2>
-            <span id="productCount" class="text-xs text-yellow-400 font-semibold bg-yellow-500/10 border border-yellow-500/30 px-3 py-1 rounded-full"></span>
+            <span id="productCount" class="text-xs text-white font-semibold bg-zinc-800 border border-zinc-700 px-3 py-1 rounded-full"></span>
         </div>
         
         <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -145,7 +147,7 @@
         &copy; 2026 Base.Az. Bütün hüquqlar qorunur.
     </footer>
 
-    <!-- Məhsul Bazası (500 ədəd) -->
+    <!-- 500 Məhsulluq Baza və İnteqrasiya -->
     <script>
         const products = [];
         
@@ -225,8 +227,8 @@
             const titleElement = document.getElementById('currentCategoryTitle');
             
             grid.innerHTML = '';
-            countLabel.innerText = `${items.length} məhsul tapıldı`;
-            titleElement.innerHTML = `<i class="fa-solid fa-layer-group text-yellow-400"></i> <span>${titleText}</span>`;
+            countLabel.innerText = `${items.length} məhsul aktivdir`;
+            titleElement.innerHTML = `<i class="fa-solid fa-layer-group text-white"></i> <span class="text-white">${titleText}</span>`;
             
             if(items.length === 0) {
                 grid.innerHTML = '<div class="col-span-full text-center text-zinc-500 py-12">Heç bir məhsul tapılmadı.</div>';
@@ -237,20 +239,20 @@
 
             displayItems.forEach(p => {
                 const card = `
-                    <div class="bg-zinc-900/60 border border-zinc-800 hover:border-yellow-500/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
+                    <div class="bg-zinc-900/60 border border-zinc-800 hover:border-white/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
                         <div>
-                            <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center text-yellow-400 text-xl mb-4 group-hover:bg-yellow-500 group-hover:text-black transition">
+                            <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center text-white text-xl mb-4 group-hover:bg-white group-hover:text-black transition">
                                 <i class="fa-solid fa-${p.icon}"></i>
                             </div>
-                            <span class="text-[10px] text-yellow-400 uppercase font-bold tracking-wider">${p.catName}</span>
-                            <h3 class="font-bold text-lg text-white mb-2 mt-1">${p.name}</h3>
+                            <span class="text-[10px] text-white uppercase font-bold tracking-wider bg-zinc-800 px-2.5 py-1 rounded-md">${p.catName}</span>
+                            <h3 class="font-bold text-lg text-white mb-2 mt-2">${p.name}</h3>
                             <ul class="text-xs text-zinc-400 space-y-1.5 mb-6">
-                                ${p.specs.map(s => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-[10px]"></i> ${s}</li>`).join('')}
+                                ${p.specs.map(s => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-white text-[10px]"></i> ${s}</li>`).join('')}
                             </ul>
                         </div>
                         <div class="flex items-center justify-between border-t border-zinc-800/80 pt-4 mt-2">
-                            <span class="font-bold text-yellow-400 text-base">${p.price}</span>
-                            <button onclick="alert('${p.name} müqayisə siyahısına əlavə olundu!')" class="bg-zinc-800 hover:bg-yellow-500 hover:text-black text-xs font-semibold px-3 py-2 rounded-lg transition">Müqayisə et</button>
+                            <span class="font-bold text-white text-base">${p.price}</span>
+                            <button onclick="alert('${p.name} müqayisə siyahısına əlavə olundu!')" class="bg-zinc-800 hover:bg-white hover:text-black text-xs font-semibold px-3 py-2 rounded-lg transition">Müqayisə et</button>
                         </div>
                     </div>
                 `;
@@ -259,7 +261,6 @@
         }
 
         function filterCategory(cat, event) {
-            // Düymələrin aktivlik sinfini idarə et
             document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active-cat'));
             if(event && event.currentTarget) {
                 event.currentTarget.classList.add('active-cat');
@@ -270,11 +271,11 @@
             } else {
                 const filtered = products.filter(p => p.cat === cat);
                 const catNames = {
-                    'laptops': 'Kompüterlər Bölməsi',
-                    'tablets': 'Planşetlər Bölməsi',
-                    'vr': 'VR Eynəklər Bölməsi',
-                    'headphones': 'Qulaqlıqlar Bölməsi',
-                    'watches': 'Ağıllı Saatlar Bölməsi'
+                    'laptops': 'Cari bölmə: Kompüterlər',
+                    'tablets': 'Cari bölmə: Planşetlər',
+                    'vr': 'Cari bölmə: VR Eynəklər',
+                    'headphones': 'Cari bölmə: Qulaqlıqlar',
+                    'watches': 'Cari bölmə: Ağıllı Saatlar'
                 };
                 renderProducts(filtered, catNames[cat] || 'Kataloq');
             }
@@ -297,9 +298,7 @@
             document.getElementById(id).classList.remove('active');
         }
 
-        // İlkin yüklənmə
         renderProducts(products, "Bütün Məhsullar Kataloqu");
     </script>
 </body>
-    </html>
-                        
+</html>
