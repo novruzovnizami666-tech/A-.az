@@ -21,6 +21,11 @@
         .modal.active {
             display: flex;
         }
+        .cat-btn.active-cat {
+            background-color: #eab308 !important;
+            color: #000000 !important;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body class="bg-black text-gray-100 font-sans min-h-screen flex flex-col justify-between">
@@ -28,18 +33,18 @@
     <!-- Header / Naviqasiya -->
     <header class="border-b border-zinc-800 bg-zinc-950/90 backdrop-blur sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div class="flex items-center space-x-3 cursor-pointer" onclick="filterCategory('all')">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="filterCategory('all', event)">
                 <div class="w-10 h-10 rounded-xl gold-gradient flex items-center justify-center font-black text-black text-xl shadow-lg shadow-yellow-500/20">B</div>
                 <span class="text-2xl font-black tracking-wider text-white">Base<span class="gold-text">.Az</span></span>
             </div>
             
             <!-- Naviqasiya Linkləri -->
             <nav class="hidden lg:flex space-x-6 text-sm font-medium text-zinc-300">
-                <button onclick="filterCategory('laptops')" class="hover:text-yellow-400 transition">Kompüterlər</button>
-                <button onclick="filterCategory('tablets')" class="hover:text-yellow-400 transition">Planşetlər</button>
-                <button onclick="filterCategory('vr')" class="hover:text-yellow-400 transition">VR Eynəklər</button>
-                <button onclick="filterCategory('headphones')" class="hover:text-yellow-400 transition">Qulaqlıqlar</button>
-                <button onclick="filterCategory('watches')" class="hover:text-yellow-400 transition">Ağıllı Saatlar</button>
+                <button onclick="filterCategory('laptops', event)" class="hover:text-yellow-400 transition">Kompüterlər</button>
+                <button onclick="filterCategory('tablets', event)" class="hover:text-yellow-400 transition">Planşetlər</button>
+                <button onclick="filterCategory('vr', event)" class="hover:text-yellow-400 transition">VR Eynəklər</button>
+                <button onclick="filterCategory('headphones', event)" class="hover:text-yellow-400 transition">Qulaqlıqlar</button>
+                <button onclick="filterCategory('watches', event)" class="hover:text-yellow-400 transition">Ağıllı Saatlar</button>
             </nav>
 
             <!-- Auth Buttons -->
@@ -69,24 +74,24 @@
 
         <!-- Kateqoriya Düymələri -->
         <div class="flex flex-wrap justify-center gap-3 mt-8">
-            <button onclick="filterCategory('all')" class="cat-btn bg-yellow-500 text-black font-bold px-4 py-2 rounded-xl text-sm transition">Hamısı</button>
-            <button onclick="filterCategory('laptops')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">💻 Kompüterlər</button>
-            <button onclick="filterCategory('tablets')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">📱 Planşetlər</button>
-            <button onclick="filterCategory('vr')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🥽 VR Eynəklər</button>
-            <button onclick="filterCategory('headphones')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🎧 Qulaqlıqlar</button>
-            <button onclick="filterCategory('watches')" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">⌚ Ağıllı Saatlar</button>
+            <button onclick="filterCategory('all', event)" class="cat-btn active-cat bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">Hamısı</button>
+            <button onclick="filterCategory('laptops', event)" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">💻 Kompüterlər</button>
+            <button onclick="filterCategory('tablets', event)" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">📱 Planşetlər</button>
+            <button onclick="filterCategory('vr', event)" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🥽 VR Eynəklər</button>
+            <button onclick="filterCategory('headphones', event)" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">🎧 Qulaqlıqlar</button>
+            <button onclick="filterCategory('watches', event)" class="cat-btn bg-zinc-900 border border-zinc-800 hover:border-yellow-500/50 px-4 py-2 rounded-xl text-sm transition">⌚ Ağıllı Saatlar</button>
         </div>
     </section>
 
     <!-- Məhsullar Grid -->
     <main class="max-w-7xl mx-auto px-4 py-6 flex-grow w-full">
-        <h2 class="text-xl font-bold mb-6 flex items-center justify-between">
-            <div class="flex items-center gap-2">
+        <div class="flex items-center justify-between mb-6 border-b border-zinc-800 pb-4">
+            <h2 id="currentCategoryTitle" class="text-xl font-bold flex items-center gap-2 text-white">
                 <i class="fa-solid fa-layer-group text-yellow-400"></i>
-                <span>Məhsul Kataloqu</span>
-            </div>
-            <span id="productCount" class="text-xs text-zinc-400 font-normal"></span>
-        </h2>
+                <span>Bütün Məhsullar Kataloqu</span>
+            </h2>
+            <span id="productCount" class="text-xs text-yellow-400 font-semibold bg-yellow-500/10 border border-yellow-500/30 px-3 py-1 rounded-full"></span>
+        </div>
         
         <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Dinamik məhsullar -->
@@ -151,6 +156,7 @@
             products.push({
                 name: `${brand} Gen-${i}`,
                 cat: "laptops",
+                catName: "Kompüterlər",
                 icon: "laptop",
                 specs: [`${(i % 2 === 0) ? 32 : 16}GB RAM`, `${(i % 2 === 0) ? '2TB' : '1TB'} SSD`, `RTX / Retina Ekran`],
                 price: `${1800 + (i * 45)} AZN`
@@ -164,6 +170,7 @@
             products.push({
                 name: `${brand} Ultra Series ${i}`,
                 cat: "tablets",
+                catName: "Planşetlər",
                 icon: "tablet-screen-button",
                 specs: [`${(i % 2 === 0) ? 16 : 8}GB RAM`, `256GB Yaddaş`, `AMOLED 120Hz`],
                 price: `${700 + (i * 25)} AZN`
@@ -177,6 +184,7 @@
             products.push({
                 name: `${brand} Edition v${i}`,
                 cat: "vr",
+                catName: "VR Eynəklər",
                 icon: "vr-cardboard",
                 specs: [`4K+ Micro-OLED`, `256GB Yaddaş`, `Spatial Audio`],
                 price: `${1000 + (i * 50)} AZN`
@@ -190,6 +198,7 @@
             products.push({
                 name: `${brand} Pro Mk-${i}`,
                 cat: "headphones",
+                catName: "Qulaqlıqlar",
                 icon: "headphones",
                 specs: [`Active Noise Cancelling (ANC)`, `30 Saat Batareya`, `Hi-Res Audio`],
                 price: `${350 + (i * 12)} AZN`
@@ -203,15 +212,21 @@
             products.push({
                 name: `${brand} Titanium Ed. ${i}`,
                 cat: "watches",
+                catName: "Ağıllı Saatlar",
                 icon: "stopwatch",
                 specs: [`Sapphire Crystal Glass`, `GPS + Cellular`, `BioActive Sensor`],
                 price: `${500 + (i * 18)} AZN`
             });
         }
 
-        function renderProducts(items) {
+        function renderProducts(items, titleText = "Bütün Məhsullar Kataloqu") {
             const grid = document.getElementById('productGrid');
+            const countLabel = document.getElementById('productCount');
+            const titleElement = document.getElementById('currentCategoryTitle');
+            
             grid.innerHTML = '';
+            countLabel.innerText = `${items.length} məhsul tapıldı`;
+            titleElement.innerHTML = `<i class="fa-solid fa-layer-group text-yellow-400"></i> <span>${titleText}</span>`;
             
             if(items.length === 0) {
                 grid.innerHTML = '<div class="col-span-full text-center text-zinc-500 py-12">Heç bir məhsul tapılmadı.</div>';
@@ -227,7 +242,8 @@
                             <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center text-yellow-400 text-xl mb-4 group-hover:bg-yellow-500 group-hover:text-black transition">
                                 <i class="fa-solid fa-${p.icon}"></i>
                             </div>
-                            <h3 class="font-bold text-lg text-white mb-2">${p.name}</h3>
+                            <span class="text-[10px] text-yellow-400 uppercase font-bold tracking-wider">${p.catName}</span>
+                            <h3 class="font-bold text-lg text-white mb-2 mt-1">${p.name}</h3>
                             <ul class="text-xs text-zinc-400 space-y-1.5 mb-6">
                                 ${p.specs.map(s => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-[10px]"></i> ${s}</li>`).join('')}
                             </ul>
@@ -242,51 +258,36 @@
             });
         }
 
-        function filterCategory(cat) {
+        function filterCategory(cat, event) {
+            // Düymələrin aktivlik sinfini idarə et
+            document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active-cat'));
+            if(event && event.currentTarget) {
+                event.currentTarget.classList.add('active-cat');
+            }
+
             if(cat === 'all') {
-                renderProducts(products);
+                renderProducts(products, "Bütün Məhsullar Kataloqu");
             } else {
                 const filtered = products.filter(p => p.cat === cat);
-                renderProducts(filtered);
+                const catNames = {
+                    'laptops': 'Kompüterlər Bölməsi',
+                    'tablets': 'Planşetlər Bölməsi',
+                    'vr': 'VR Eynəklər Bölməsi',
+                    'headphones': 'Qulaqlıqlar Bölməsi',
+                    'watches': 'Ağıllı Saatlar Bölməsi'
+                };
+                renderProducts(filtered, catNames[cat] || 'Kataloq');
             }
         }
 
         function searchProducts() {
             const query = document.getElementById('searchInput').value.toLowerCase();
             if(query.trim() === '') {
-                renderProducts(products);
+                renderProducts(products, "Bütün Məhsullar Kataloqu");
                 return;
             }
             const filtered = products.filter(p => p.name.toLowerCase().includes(query) || p.specs.some(s => s.toLowerCase().includes(query)));
-            
-            const grid = document.getElementById('productGrid');
-            grid.innerHTML = '';
-            
-            if(filtered.length === 0) {
-                grid.innerHTML = '<div class="col-span-full text-center text-zinc-500 py-12">Axtarışa uyğun məhsul tapılmadı.</div>';
-                return;
-            }
-
-            filtered.forEach(p => {
-                const card = `
-                    <div class="bg-zinc-900/60 border border-zinc-800 hover:border-yellow-500/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between group">
-                        <div>
-                            <div class="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center text-yellow-400 text-xl mb-4 group-hover:bg-yellow-500 group-hover:text-black transition">
-                                <i class="fa-solid fa-${p.icon}"></i>
-                            </div>
-                            <h3 class="font-bold text-lg text-white mb-2">${p.name}</h3>
-                            <ul class="text-xs text-zinc-400 space-y-1.5 mb-6">
-                                ${p.specs.map(s => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-[10px]"></i> ${s}</li>`).join('')}
-                            </ul>
-                        </div>
-                        <div class="flex items-center justify-between border-t border-zinc-800/80 pt-4 mt-2">
-                            <span class="font-bold text-yellow-400 text-base">${p.price}</span>
-                            <button onclick="alert('${p.name} müqayisə siyahısına əlavə olundu!')" class="bg-zinc-800 hover:bg-yellow-500 hover:text-black text-xs font-semibold px-3 py-2 rounded-lg transition">Müqayisə et</button>
-                        </div>
-                    </div>
-                `;
-                grid.innerHTML += card;
-            });
+            renderProducts(filtered, `Axtarış nəticəsi: "${query}"`);
         }
 
         function openModal(id) {
@@ -296,8 +297,9 @@
             document.getElementById(id).classList.remove('active');
         }
 
-        renderProducts(products);
+        // İlkin yüklənmə
+        renderProducts(products, "Bütün Məhsullar Kataloqu");
     </script>
 </body>
-                    </html>
-    
+    </html>
+                        
